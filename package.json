@@ -25,6 +25,7 @@
   "dependencies": {
     "@nodegui/nodegui": "^0.13.4",
     "@vue/runtime-core": "^3.0.0-alpha.7",
+    "typescript": "^3.8.3",
     "vue": "^3.0.0-alpha.8"
   }
 }
