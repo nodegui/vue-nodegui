@@ -38,6 +38,7 @@
     "eslint-import-resolver-typescript": "^2.0.0",
     "eslint-plugin-import": "^2.20.1",
     "husky": "^4.2.3",
+    "ts-transformer-imports": "^0.4.3",
     "typescript": "^3.8.3"
   }
 }
