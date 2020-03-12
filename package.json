@@ -4,7 +4,8 @@
   "description": "library to render native desktop applications using vue js",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint --ext ts ."
   },
   "repository": {
     "type": "git",
@@ -25,7 +26,6 @@
   "dependencies": {
     "@nodegui/nodegui": "^0.13.4",
     "@vue/runtime-core": "^3.0.0-alpha.7",
-    "typescript": "^3.8.3",
     "vue": "^3.0.0-alpha.8"
   },
   "devDependencies": {
@@ -33,8 +33,11 @@
     "@typescript-eslint/parser": "^2.23.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-airbnb-base": "^14.0.0",
     "eslint-config-prettier": "^6.10.0",
     "eslint-import-resolver-typescript": "^2.0.0",
-    "eslint-plugin-import": "^2.20.1"
+    "eslint-plugin-import": "^2.20.1",
+    "husky": "^4.2.3",
+    "typescript": "^3.8.3"
   }
 }
