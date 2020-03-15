@@ -2,7 +2,7 @@
   "name": "vue-nodegui",
   "version": "0.0.1",
   "description": "library to render native desktop applications using vue js",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint --ext ts .",
