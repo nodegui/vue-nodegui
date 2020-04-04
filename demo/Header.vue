@@ -7,8 +7,6 @@ import {ref} from 'vue';
 
 export default {
   setup() {
-    console.log("setting up----");
-
     const count = ref(0);
     
     const inc = () => {
