@@ -1,22 +1,9 @@
 <template>
-  <button @pressed="inc">click me</button>
+  <p>click me</p>
 </template>
 
 <script>
-import {ref} from 'vue';
-
-export default {
-  setup() {
-    const count = ref(0);
-    
-    const inc = () => {
-      count.value++;
-      console.log(count.value);
-    }
-
-    return {inc};
-  }
-}
+export default {}
 </script>
 
 <style>
