@@ -1,38 +1,51 @@
 import { RendererOptions } from '@vue/runtime-core';
-import { QLabel } from '@nodegui/nodegui';
+import getConfigByType, { ValidWidgets } from '../widgets/widgetMap';
 import patchProp from './patchProp';
 
-type HostNode = any;
-type HostElement = any;
+// TODO: create the hostNode and hostElement types
+export type HostNode = any;
+export type HostElement = any;
 
 const nodeOps: RendererOptions<HostNode, HostElement> = {
-  insert: (el: HostNode, parent: HostElement) => {
-    parent.setCentralWidget(el);
+  insert: (child: HostNode, parent: HostElement) => {
+    // parent.setCentralWidget(el);
+    // TODO: implement insertChild on each of the types
+    parent.insertChild(child);
   },
   remove: (child: HostNode) => {
     console.log('remove', child);
   },
-  createElement: (type: string) => {
-    console.log(type);
-    return new QLabel();
+  createElement: (type: ValidWidgets) => {
+    // console.log(type);
+    // return new QPushButton();
+    const config = getConfigByType(type);
+    // TODO: implement createElement on each of the types
+    // @ts-ignore
+    return config.createElement();
   },
   createText: (text: string) => {
     console.log('create text: ', text);
+    // create a VNText maybe (?)
   },
   createComment: (text: string) => {
     console.log('create comment: ', text);
+    // Maybe don't implement this yet
   },
   setText: (node: HostNode, text: string) => {
+    // TODO: implement setText on each of the types
     node.setText(text);
   },
   setElementText: (node: HostElement, text: string) => {
+    // TODO: implement setText on each of the types
     node.setText(text);
   },
   parentNode: (node: HostNode) => {
     console.log('parent node: ', node);
+    // implement this later (?)
   },
   nextSibling: (node: HostNode) => {
     console.log('next sibling: ', node);
+    // implement this later (?)
   },
   patchProp,
 };
