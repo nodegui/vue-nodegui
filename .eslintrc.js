@@ -52,6 +52,7 @@ module.exports = {
         "js": "never",
         "ts": "never",
       }
-    ]
+    ],
+    "class-methods-use-this": 0
   }
 }
