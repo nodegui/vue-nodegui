@@ -1,8 +1,8 @@
-import { VNButton } from './Button';
-import { VNView } from './View';
-import { VNText } from './Text';
-import { VNTextInput } from './TextInput';
-import { VNImage } from './Image';
+// import { VNButton } from './Button';
+// import { VNView } from './View';
+import TextConfig from './Text';
+// import { VNTextInput } from './TextInput';
+// import { VNImage } from './Image';
 
 export type ValidWidgets = 'div' | 'p' | 'img' | 'input' | 'button';
 
@@ -11,11 +11,11 @@ type WidgetMap = {
 }
 
 const widgetMap: WidgetMap = {
-  div: new VNView(),
-  p: new VNText(),
-  img: new VNImage(),
-  input: new VNTextInput(),
-  button: new VNButton(),
+  div: undefined,
+  p: new TextConfig(),
+  img: undefined,
+  input: undefined,
+  button: undefined,
 };
 
 const getConfigByType = (type: ValidWidgets) => {
