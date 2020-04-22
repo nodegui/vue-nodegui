@@ -8,9 +8,7 @@ export type HostElement = any;
 
 const nodeOps: RendererOptions<HostNode, HostElement> = {
   insert: (child: HostNode, parent: HostElement) => {
-    parent.setCentralWidget(child);
-    // TODO: implement insertChild on each of the types
-    // parent.insertChild(child);
+    parent.insertChild(child);
   },
   remove: (child: HostNode) => {
     console.log('remove', child);

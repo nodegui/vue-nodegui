@@ -1,5 +1,5 @@
 import { createRenderer, CreateAppFunction } from '@vue/runtime-core';
-import { QMainWindow } from '@nodegui/nodegui';
+import { VNWindow } from '../widgets/Window/VNWindow';
 import rendererOptions from './nodeOps';
 
 const renderer = createRenderer(rendererOptions);
@@ -9,7 +9,7 @@ export const createApp: CreateAppFunction<any> = (...args) => {
 
   const { mount } = app;
   app.mount = () => {
-    const container = new QMainWindow();
+    const container = new VNWindow();
     container.show();
     // Need the next line
     // to prevent the window
