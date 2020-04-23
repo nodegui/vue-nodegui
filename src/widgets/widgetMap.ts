@@ -1,5 +1,5 @@
 // import { VNButton } from './Button';
-// import { VNView } from './View';
+import ViewConfig from './View';
 import TextConfig from './Text';
 // import { VNTextInput } from './TextInput';
 // import { VNImage } from './Image';
@@ -11,7 +11,7 @@ type WidgetMap = {
 }
 
 const widgetMap: WidgetMap = {
-  div: undefined,
+  div: new ViewConfig(),
   p: new TextConfig(),
   img: undefined,
   input: undefined,
