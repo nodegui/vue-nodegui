@@ -1,5 +1,7 @@
 <template>
-  <p>click me</p>
+  <div>
+    <p>click me</p>
+  </div>
 </template>
 
 <script>
