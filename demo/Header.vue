@@ -1,12 +1,27 @@
 <template>
   <div>
     <p>First line of text</p>
-    <p>Second line of text</p>
+    <p>Second line of text {{count}}</p>
+    <button @click="inc">increment</button>
   </div>
 </template>
 
 <script>
-export default {}
+import { ref } from 'vue';
+
+export default {
+  setup() {
+    const count = ref(0)
+    const inc = () => {
+      count.value++
+    }
+
+    return {
+      count,
+      inc
+    }
+  }
+}
 </script>
 
 <style>
