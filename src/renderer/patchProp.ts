@@ -11,8 +11,8 @@ const patchProp: RendererOptions['patchProp'] = (
   // parentSuspense,
   // unmountChildren,
 ) => {
+  // TODO: handle prop additions in individual widgets
   if (!prevValue) {
-    console.log('adding press listener');
     el.addEventListener('pressed', nextValue);
   }
 };
