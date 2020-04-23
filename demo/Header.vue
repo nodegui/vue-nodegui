@@ -1,6 +1,7 @@
 <template>
   <div>
-    <p>click me</p>
+    <p>First line of text</p>
+    <p>Second line of text</p>
   </div>
 </template>
 
