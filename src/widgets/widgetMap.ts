@@ -1,4 +1,4 @@
-// import { VNButton } from './Button';
+import ButtonConfig from './Button';
 import ViewConfig from './View';
 import TextConfig from './Text';
 // import { VNTextInput } from './TextInput';
@@ -15,7 +15,7 @@ const widgetMap: WidgetMap = {
   p: new TextConfig(),
   img: undefined,
   input: undefined,
-  button: undefined,
+  button: new ButtonConfig(),
 };
 
 const getConfigByType = (type: ValidWidgets) => {
