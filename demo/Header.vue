@@ -3,6 +3,9 @@
     <p>First line of text</p>
     <p>Second line of text {{count}}</p>
     <button @click="inc">increment</button>
+    <div :visible="false">
+      This view is invisible
+    </div>
   </div>
 </template>
 
