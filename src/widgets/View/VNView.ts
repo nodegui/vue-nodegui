@@ -1,4 +1,55 @@
 import { QWidget, FlexLayout, NodeWidget } from '@nodegui/nodegui';
+import { PropSetters, Prop } from '../../renderer/patchProp';
+
+export interface ViewProps {
+  /**
+   * Shows or hides the widget and its children. [QWidget: show](https://docs.nodegui.org/docs/api/NodeWidget#widgetshow)
+   */
+  visible?: boolean;
+  /**
+   * Sets the property that holds the widget's style sheet. [QWidget: setStyleSheet](https://docs.nodegui.org/docs/api/NodeWidget#widgetsetstylesheetstylesheet)
+   */
+  styleSheet?: string;
+  /**
+   * Sets the inline stylesheet property. [QWidget: setInlineStyle](https://docs.nodegui.org/docs/api/NodeWidget#widgetsetinlinestylestyle)
+   */
+  style?: string;
+  /**
+   * Sets the object name (id) of the widget in Qt. Object name can be analogous to id of an element in the web world. Using the objectName of the widget one can reference it in the Qt's stylesheet much like what we do with id in the web world. [QWidget: setObjectName](https://docs.nodegui.org/docs/api/NodeWidget#widgetsetobjectnameobjectname)
+   */
+  id?: string;
+  /**
+   * Sets the property that tells whether mouseTracking is enabled for the widget. [QWidget: setMouseTracking](https://docs.nodegui.org/docs/api/NodeWidget#widgetsetmousetrackingismousetracked)
+   */
+  mouseTracking?: boolean;
+  /**
+   * Sets the property that tells whether the widget is enabled. In general an enabled widget handles keyboard and mouse events; a disabled widget does not. [QWidget: setEnabled](https://docs.nodegui.org/docs/api/NodeWidget#widgetsetenabledenabled)
+   */
+  enabled?: boolean;
+  /**
+   * This property holds the level of opacity for the window. [QWidget: setWindowOpacity](https://docs.nodegui.org/docs/api/NodeWidget#widgetsetwindowopacityopacity)
+   */
+  windowOpacity?: number;
+  /**
+   * Sets the window title property. [QWidget: setWindowTitle](https://docs.nodegui.org/docs/api/NodeWidget#widgetsetwindowtitletitle)
+   */
+  windowTitle?: string;
+  /**
+   * Prop to set the ref. The ref will return the underlying nodegui widget.
+   */
+  ref?: any;
+}
+
+// @ts-ignore
+export const viewPropsSetters: PropSetters<ViewProps> = {
+  visible: (widget: NodeWidget<any>, prevValue: boolean, nextValue: boolean) => {
+    if (nextValue) {
+      widget.show();
+      return;
+    }
+    widget.hide();
+  },
+};
 
 export class VNView extends QWidget {
   insertChild(child: NodeWidget<any>) {
@@ -12,5 +63,14 @@ export class VNView extends QWidget {
       this.layout = flexLayout;
     }
     this.layout.addWidget(child);
+  }
+
+  patchProp(
+    key: keyof ViewProps,
+    prevValue: Prop<ViewProps, typeof key>,
+    nextValue: Prop<ViewProps, typeof key>,
+  ) {
+    const propSetter = viewPropsSetters[key];
+    propSetter(this, prevValue as never, nextValue as never);
   }
 }
