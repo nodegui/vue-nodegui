@@ -34,20 +34,36 @@ export interface ViewProps {
    * Sets the window title property. [QWidget: setWindowTitle](https://docs.nodegui.org/docs/api/NodeWidget#widgetsetwindowtitletitle)
    */
   windowTitle?: string;
-  /**
-   * Prop to set the ref. The ref will return the underlying nodegui widget.
-   */
-  ref?: any;
 }
 
-// @ts-ignore
 export const viewPropsSetters: PropSetters<ViewProps> = {
-  visible: (widget: NodeWidget<any>, prevValue: boolean, nextValue: boolean) => {
+  visible: (widget: NodeWidget<any>, _, nextValue: boolean) => {
     if (nextValue) {
       widget.show();
       return;
     }
     widget.hide();
+  },
+  styleSheet: (widget: NodeWidget<any>, _, nextValue: string) => {
+    widget.setStyleSheet(nextValue);
+  },
+  style: (widget: NodeWidget<any>, _, nextValue: string) => {
+    widget.setInlineStyle(nextValue);
+  },
+  id(widget: NodeWidget<any>, _, nextValue: string) {
+    widget.setObjectName(nextValue);
+  },
+  mouseTracking(widget: NodeWidget<any>, _, nextValue: boolean) {
+    widget.setMouseTracking(nextValue);
+  },
+  enabled(widget: NodeWidget<any>, _, nextValue: boolean) {
+    widget.setEnabled(nextValue);
+  },
+  windowOpacity(widget: NodeWidget<any>, _, nextValue: number) {
+    widget.setWindowOpacity(nextValue);
+  },
+  windowTitle(widget: NodeWidget<any>, _, nextValue: string) {
+    widget.setWindowTitle(nextValue);
   },
 };
 
