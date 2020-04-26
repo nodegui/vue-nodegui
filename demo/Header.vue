@@ -3,7 +3,8 @@
     <p>First line of text</p>
     <p>Second line of text {{count}}</p>
     <button v-on:clicked="inc" :flat="true">increment</button>
-    <div :visible="true">
+    <button v-on:pressed="toggleView">{{viewVisible?"Hide": "Show"}} extra text</button>
+    <div :visible="viewVisible">
       <p>This view is invisible</p>
     </div>
   </div>
@@ -14,15 +15,23 @@ import { ref } from 'vue';
 
 export default {
   setup() {
-    const count = ref(0)
+    const count = ref(0);
+    const viewVisible = ref(false);
     const inc = () => {
-      count.value++
+      count.value++;
+    }
+
+    const toggleView = () => {
+      viewVisible.value = !viewVisible.value;
+      console.log(viewVisible);
     }
 
     return {
       count,
-      inc
-    }
+      inc,
+      viewVisible,
+      toggleView
+    };
   }
 }
 </script>
