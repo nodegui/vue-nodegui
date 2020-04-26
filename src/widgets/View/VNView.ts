@@ -1,5 +1,5 @@
 import {
-  QWidget, FlexLayout, NodeWidget, NativeElement,
+  QWidget, FlexLayout, NodeWidget, NativeElement, WidgetEventTypes, QAbstractButtonSignals,
 } from '@nodegui/nodegui';
 import { PropSetters, Prop } from '../../renderer/patchProp';
 
@@ -39,8 +39,23 @@ export interface ViewProps {
    */
   windowTitle?: string;
 
-  onClicked?: EventHandler
+  onClicked?: EventHandler;
+
+  onPressed?: EventHandler;
+
+  onReleased?: EventHandler;
+
+  onToggled?: EventHandler;
 }
+
+export const patchEvent = (
+  eventType: Partial<WidgetEventTypes | keyof QAbstractButtonSignals>,
+) => (widget: NodeWidget<any>, prevValue: EventHandler, nextValue: EventHandler) => {
+  if (prevValue !== nextValue) {
+    widget.removeEventListener(eventType, prevValue);
+    widget.addEventListener(eventType, nextValue);
+  }
+};
 
 export const viewPropsSetters: PropSetters<VNView, ViewProps> = {
   visible: (widget: NodeWidget<any>, _, nextValue: boolean) => {
@@ -74,12 +89,13 @@ export const viewPropsSetters: PropSetters<VNView, ViewProps> = {
   /**
    * Events
    */
-  onClicked: (widget: NodeWidget<any>, prevValue: EventHandler, nextValue: EventHandler) => {
-    if (prevValue !== nextValue) {
-      widget.removeEventListener('clicked', prevValue);
-      widget.addEventListener('clicked', nextValue);
-    }
-  },
+  onClicked: patchEvent('clicked'),
+
+  onPressed: patchEvent('pressed'),
+
+  onReleased: patchEvent('released'),
+
+  onToggled: patchEvent('toggled'),
 };
 
 export class VNView extends QWidget {
