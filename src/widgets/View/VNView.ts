@@ -36,7 +36,7 @@ export interface ViewProps {
   windowTitle?: string;
 }
 
-export const viewPropsSetters: PropSetters<ViewProps> = {
+export const viewPropsSetters: PropSetters<VNView, ViewProps> = {
   visible: (widget: NodeWidget<any>, _, nextValue: boolean) => {
     if (nextValue) {
       widget.show();
