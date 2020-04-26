@@ -3,9 +3,9 @@ import { NodeWidget } from '@nodegui/nodegui';
 
 export type Prop<T, key extends keyof T> = Required<T>[key];
 
-export type PropSetters<T extends {}> = {
+export type PropSetters<W extends NodeWidget<any>, T extends {}> = {
   [key in keyof Required<T>]: (
-    widget: NodeWidget<any>,
+    widget: W,
     prevValue: Prop<T, key>,
     nextValue: Prop<T, key>
   ) => void
