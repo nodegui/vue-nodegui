@@ -27,6 +27,6 @@ export class VNButton extends QPushButton {
     nextValue: Prop<ButtonProps, typeof key>,
   ) {
     const propSetter = buttonPropsSetters[key];
-    propSetter(this, prevValue as never, nextValue as never);
+    if (propSetter !== undefined) { propSetter(this, prevValue as never, nextValue as never); }
   }
 }
