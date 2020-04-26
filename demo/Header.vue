@@ -7,6 +7,7 @@
     <div :visible="viewVisible">
       <p>This view is invisible</p>
     </div>
+    <input />
   </div>
 </template>
 
