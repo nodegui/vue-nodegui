@@ -1,6 +1,7 @@
 import ButtonConfig from './Button';
 import ViewConfig from './View';
 import TextConfig from './Text';
+import PlainTextEditConfig from './TextInput';
 // import { VNTextInput } from './TextInput';
 // import { VNImage } from './Image';
 
@@ -14,7 +15,7 @@ const widgetMap: WidgetMap = {
   div: new ViewConfig(),
   p: new TextConfig(),
   img: undefined,
-  input: undefined,
+  input: new PlainTextEditConfig(),
   button: new ButtonConfig(),
 };
 
