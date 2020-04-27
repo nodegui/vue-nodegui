@@ -7,7 +7,7 @@
     <div :visible="viewVisible">
       <p>This view is invisible</p>
     </div>
-    <input />
+    <input placeholderText="legend says you can type here" />
   </div>
 </template>
 
