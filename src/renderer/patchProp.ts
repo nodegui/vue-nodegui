@@ -19,9 +19,10 @@ export const patchEvent = (
   prevValue: EventHandler,
   nextValue: EventHandler,
 ) => {
+  const camelCaseEvent = eventType[0].toLowerCase() + eventType.slice(1);
   if (prevValue !== nextValue) {
-    widget.removeEventListener(eventType, prevValue);
-    widget.addEventListener(eventType, nextValue);
+    widget.removeEventListener(camelCaseEvent, prevValue);
+    widget.addEventListener(camelCaseEvent, nextValue);
   }
 };
 
@@ -38,7 +39,7 @@ const patchProp: RendererOptions['patchProp'] = (
 ) => {
   const isEvent = key[0] === 'o' && key[1] === 'n'; // This is more efficient than slicing. Don't change
   if (isEvent) {
-    patchEvent(key.slice(2).toLowerCase(), el, prevValue, nextValue);
+    patchEvent(key.slice(2), el, prevValue, nextValue);
     return;
   }
   el.patchProp(key, prevValue, nextValue);
