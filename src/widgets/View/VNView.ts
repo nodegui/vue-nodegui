@@ -1,9 +1,7 @@
 import {
-  QWidget, FlexLayout, NodeWidget, NativeElement, WidgetEventTypes, QAbstractButtonSignals,
+  QWidget, FlexLayout, NodeWidget,
 } from '@nodegui/nodegui';
 import { PropSetters, Prop } from '../../renderer/patchProp';
-
-export type EventHandler = (native?: NativeElement) => void;
 
 export interface ViewProps {
   /**
@@ -38,24 +36,7 @@ export interface ViewProps {
    * Sets the window title property. [QWidget: setWindowTitle](https://docs.nodegui.org/docs/api/NodeWidget#widgetsetwindowtitletitle)
    */
   windowTitle?: string;
-
-  onClicked?: EventHandler;
-
-  onPressed?: EventHandler;
-
-  onReleased?: EventHandler;
-
-  onToggled?: EventHandler;
 }
-
-export const patchEvent = (
-  eventType: Partial<WidgetEventTypes | keyof QAbstractButtonSignals>,
-) => (widget: NodeWidget<any>, prevValue: EventHandler, nextValue: EventHandler) => {
-  if (prevValue !== nextValue) {
-    widget.removeEventListener(eventType, prevValue);
-    widget.addEventListener(eventType, nextValue);
-  }
-};
 
 export const viewPropsSetters: PropSetters<VNView, ViewProps> = {
   visible: (widget: NodeWidget<any>, _, nextValue: boolean) => {
@@ -86,16 +67,6 @@ export const viewPropsSetters: PropSetters<VNView, ViewProps> = {
   windowTitle(widget: NodeWidget<any>, _, nextValue: string) {
     widget.setWindowTitle(nextValue);
   },
-  /**
-   * Events
-   */
-  onClicked: patchEvent('clicked'),
-
-  onPressed: patchEvent('pressed'),
-
-  onReleased: patchEvent('released'),
-
-  onToggled: patchEvent('toggled'),
 };
 
 export class VNView extends QWidget {
