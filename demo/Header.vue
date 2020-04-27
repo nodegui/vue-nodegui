@@ -1,13 +1,13 @@
 <template>
   <div>
-    <p>First line of text</p>
+    <p>{{line1Text}}</p>
+    <input @textChanged="textChanged" placeholderText="legend says you can type here" />
     <p>Second line of text {{count}}</p>
     <button v-on:clicked="inc" :flat="true">increment</button>
     <button v-on:pressed="toggleView">{{viewVisible?"Hide": "Show"}} extra text</button>
     <div :visible="viewVisible">
       <p>This view is invisible</p>
     </div>
-    <input placeholderText="legend says you can type here" />
   </div>
 </template>
 
@@ -18,6 +18,7 @@ export default {
   setup() {
     const count = ref(0);
     const viewVisible = ref(false);
+    const line1Text = ref('Type whatever you want in the text box below');
     const inc = () => {
       count.value++;
     }
@@ -27,11 +28,17 @@ export default {
       console.log(viewVisible);
     }
 
+    const textChanged = (e) => {
+      line1Text.value = e;
+    }
+
     return {
       count,
       inc,
       viewVisible,
-      toggleView
+      toggleView,
+      textChanged,
+      line1Text
     };
   }
 }
