@@ -27,7 +27,7 @@
   "homepage": "https://github.com/shubhamzanwar/vue-nodegui#readme",
   "dependencies": {
     "@nodegui/nodegui": "^0.13.4",
-    "@vue/runtime-core": "^3.0.0-alpha.7",
+    "@vue/runtime-core": "3.0.0-beta.4",
     "phin": "^3.4.1"
   },
   "devDependencies": {
@@ -48,9 +48,9 @@
     "ts-transformer-imports": "^0.4.3",
     "typescript": "^3.8.3",
     "url-loader": "^3.0.0",
-    "vue-loader": "^16.0.0-alpha.1",
+    "vue-loader": "^16.0.0-alpha.3",
     "webpack": "^4.41.4",
     "webpack-cli": "^3.3.11",
-    "@vue/compiler-sfc": "^3.0.0-alpha.4"
+    "@vue/compiler-sfc": "^3.0.0-beta.2"
   }
 }
