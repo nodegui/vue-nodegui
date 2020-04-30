@@ -1,6 +1,7 @@
 <template>
   <div>
     <p>{{line1Text}}</p>
+    <img src="https://via.placeholder.com/150" />
     <input @textChanged="textChanged" placeholderText="legend says you can type here" />
     <p>Second line of text {{count}}</p>
     <button v-on:clicked="inc" :flat="true">increment</button>
