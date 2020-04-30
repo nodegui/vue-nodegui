@@ -2,8 +2,7 @@ import ButtonConfig from './Button';
 import ViewConfig from './View';
 import TextConfig from './Text';
 import PlainTextEditConfig from './TextInput';
-// import { VNTextInput } from './TextInput';
-// import { VNImage } from './Image';
+import ImageConfig from './Image';
 
 export type ValidWidgets = 'div' | 'p' | 'img' | 'input' | 'button';
 
@@ -14,7 +13,7 @@ type WidgetMap = {
 const widgetMap: WidgetMap = {
   div: new ViewConfig(),
   p: new TextConfig(),
-  img: undefined,
+  img: new ImageConfig(),
   input: new PlainTextEditConfig(),
   button: new ButtonConfig(),
 };
