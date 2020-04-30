@@ -1,5 +1,8 @@
 <template>
   <div>
+    <slot name="header">
+      <p>This is the default header slot</p>
+    </slot>
     <p>{{line1Text}}</p>
     <img src="https://via.placeholder.com/150" />
     <input @textChanged="textChanged" placeholderText="legend says you can type here" />
@@ -10,6 +13,9 @@
       <p>This view is invisible</p>
     </div>
     <p :openExternalLinks="true">link to the {{link}}</p>
+    <slot>
+      <p>default slot text</p>
+    </slot>
   </div>
 </template>
 

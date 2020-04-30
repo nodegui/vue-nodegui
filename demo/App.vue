@@ -1,5 +1,10 @@
 <template>
-  <HelloWorld />
+  <HelloWorld>
+    <template v-slot:header>
+      <p>Here might be a page title</p>
+    </template>
+    <p>Default slot hello content</p>
+  </HelloWorld>
 </template>
 
 <script>
