@@ -1,22 +1,9 @@
 import {
   QLabel, QPixmap, AspectRatioMode, TransformationMode, QSize,
 } from '@nodegui/nodegui';
-import phin from 'phin';
+import { getLoadedPixmap } from '../../utils/image';
 import { Prop, PropSetters } from '../../renderer/patchProp';
-import { isValidUrl } from '../../utils/url';
 import { TextProps, textPropsSetters } from '../Text/VNText';
-
-async function getLoadedPixmap(imageUrlOrPath: string): Promise<QPixmap> {
-  const pixMap = new QPixmap();
-  if (isValidUrl(imageUrlOrPath)) {
-    const res = await phin(imageUrlOrPath);
-    const imageBuffer = Buffer.from(res.body);
-    pixMap.loadFromData(imageBuffer);
-  } else {
-    pixMap.load(imageUrlOrPath);
-  }
-  return pixMap;
-}
 
 export interface ImageProps extends TextProps {
     src?: string;
