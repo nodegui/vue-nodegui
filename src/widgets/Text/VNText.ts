@@ -3,12 +3,22 @@ import { PropSetters, Prop } from '../../renderer/patchProp';
 import { ViewProps, viewPropsSetters } from '../View/VNView';
 
 export interface TextProps extends ViewProps {
-
+  wordWrap?: boolean;
+  scaledContents?: boolean;
+  openExternalLinks?: boolean;
 }
-
 
 export const textPropsSetters: PropSetters<VNText, TextProps> = {
   ...viewPropsSetters,
+  wordWrap(widget: VNText, _, nextValue: boolean) {
+    widget.setWordWrap(nextValue);
+  },
+  scaledContents(widget: VNText, _, nextValue: boolean) {
+    widget.setProperty('scaledContents', nextValue);
+  },
+  openExternalLinks(widget: VNText, _, nextValue: boolean) {
+    widget.setProperty('openExternalLinks', nextValue);
+  },
 };
 
 export class VNText extends QLabel {
