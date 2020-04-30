@@ -9,6 +9,7 @@
     <div :visible="viewVisible">
       <p>This view is invisible</p>
     </div>
+    <p :openExternalLinks="true">link to the {{link}}</p>
   </div>
 </template>
 
@@ -33,13 +34,20 @@ export default {
       line1Text.value = e;
     }
 
+    const link = `<a 
+              style="color: white" 
+              href="https://github.com/shubhamzanwar/vue-nodegui">
+            docs
+          </a>`;
+
     return {
       count,
       inc,
       viewVisible,
       toggleView,
       textChanged,
-      line1Text
+      line1Text,
+      link
     };
   }
 }
