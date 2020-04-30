@@ -33,7 +33,6 @@ export default {
 
     const toggleView = () => {
       viewVisible.value = !viewVisible.value;
-      console.log(viewVisible);
     }
 
     const textChanged = (e) => {
