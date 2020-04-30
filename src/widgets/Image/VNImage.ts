@@ -87,11 +87,11 @@ export class VNImage extends QLabel {
     }
 
     patchProp(
-      key: keyof TextProps,
-      prevValue: Prop<TextProps, typeof key>,
-      nextValue: Prop<TextProps, typeof key>,
+      key: keyof ImageProps,
+      prevValue: Prop<ImageProps, typeof key>,
+      nextValue: Prop<ImageProps, typeof key>,
     ) {
-      const propSetter = textPropsSetters[key];
+      const propSetter = imagePropsSetters[key];
       if (propSetter !== undefined) { propSetter(this, prevValue as never, nextValue as never); }
     }
 }
