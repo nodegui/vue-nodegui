@@ -13,7 +13,7 @@ module.exports = (env = {}) => ({
   resolve: {
     extensions: ['.ts', '.js', '.vue', '.json'],
     alias: {
-      vue: '@vue/runtime-core',
+      vue: path.resolve(__dirname, './dist'),
     },
   },
   module: {
