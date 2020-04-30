@@ -29,8 +29,8 @@ export const patchEvent = (
 const patchProp: RendererOptions['patchProp'] = (
   el,
   key,
-  nextValue,
   prevValue,
+  nextValue,
   // isSVG = false,
   // prevChildren,
   // parentComponent,
@@ -39,7 +39,7 @@ const patchProp: RendererOptions['patchProp'] = (
 ) => {
   const isEvent = key[0] === 'o' && key[1] === 'n'; // This is more efficient than slicing. Don't change
   if (isEvent) {
-    patchEvent(key.slice(2), el, prevValue, nextValue);
+    patchEvent(key.slice(2), el as NodeWidget<any>, prevValue, nextValue);
     return;
   }
   el.patchProp(key, prevValue, nextValue);
