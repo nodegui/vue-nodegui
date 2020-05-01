@@ -20,7 +20,16 @@ module.exports = (env = {}) => ({
     rules: [
       {
         test: /\.vue$/,
-        use: 'vue-loader',
+        use: {
+          loader: 'vue-loader',
+          options: {
+            compilerOptions: {
+              directiveTransforms: {
+                model: console.log.bind(null, 'akkad bakkad'),
+              },
+            },
+          },
+        },
       },
       {
         test: /\.node$/,
