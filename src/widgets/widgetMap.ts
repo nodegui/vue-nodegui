@@ -3,25 +3,25 @@ import ViewConfig from './View';
 import TextConfig from './Text';
 import PlainTextEditConfig from './TextInput';
 import ImageConfig from './Image';
-
-export type ValidWidgets = 'div' | 'p' | 'img' | 'input' | 'button' | 'vn-image';
+import { ValidNativeWidgets } from './nativeWidget';
 
 type WidgetMap = {
-  [key in ValidWidgets]: any
+  [key in ValidNativeWidgets]: any
 }
 
 const widgetMap: WidgetMap = {
-  div: new ViewConfig(),
-  p: new TextConfig(),
-  img: new ImageConfig(),
-  input: new PlainTextEditConfig(),
-  button: new ButtonConfig(),
+  'vn-button': new ButtonConfig(),
+  'vn-line-edit': new PlainTextEditConfig(),
   'vn-image': new ImageConfig(),
+  'vn-text': new TextConfig(),
+  'vn-view': new ViewConfig(),
 };
 
-const getConfigByType = (type: ValidWidgets) => {
-  if (widgetMap[type] === undefined) {
-    throw new Error('invalid widget type');
+export const isNativeTag = (type: ValidNativeWidgets) => widgetMap[type] !== undefined;
+
+const getConfigByType = (type: ValidNativeWidgets) => {
+  if (!isNativeTag(type)) {
+    throw new Error(`invalid widget type ${type}`);
   }
   return widgetMap[type];
 };

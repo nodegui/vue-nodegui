@@ -1,5 +1,6 @@
 import { RendererOptions } from '@vue/runtime-core';
-import getConfigByType, { ValidWidgets } from '../widgets/widgetMap';
+import { ValidNativeWidgets } from '../widgets/nativeWidget';
+import getConfigByType from '../widgets/widgetMap';
 import patchProp from './patchProp';
 
 // TODO: create the hostNode and hostElement types
@@ -13,9 +14,7 @@ const nodeOps: RendererOptions<HostNode, HostElement> = {
   remove: (child: HostNode) => {
     console.log('remove', child);
   },
-  createElement: (type: ValidWidgets) => {
-    // console.log(type);
-    // return new QPushButton();
+  createElement: (type: ValidNativeWidgets) => {
     const config = getConfigByType(type);
     // TODO: implement createElement on each of the types
     // @ts-ignore
