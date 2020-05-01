@@ -4,7 +4,7 @@ import TextConfig from './Text';
 import PlainTextEditConfig from './TextInput';
 import ImageConfig from './Image';
 
-export type ValidWidgets = 'div' | 'p' | 'img' | 'input' | 'button';
+export type ValidWidgets = 'div' | 'p' | 'img' | 'input' | 'button' | 'vn-image';
 
 type WidgetMap = {
   [key in ValidWidgets]: any
@@ -16,6 +16,7 @@ const widgetMap: WidgetMap = {
   img: new ImageConfig(),
   input: new PlainTextEditConfig(),
   button: new ButtonConfig(),
+  'vn-image': new ImageConfig(),
 };
 
 const getConfigByType = (type: ValidWidgets) => {

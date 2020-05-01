@@ -1,11 +1,22 @@
-import { createRenderer, CreateAppFunction } from '@vue/runtime-core';
+import { createRenderer, CreateAppFunction, App } from '@vue/runtime-core';
 import { VNWindow } from '../widgets/Window/VNWindow';
 import rendererOptions from './nodeOps';
 
 const renderer = createRenderer(rendererOptions);
 
+function injectNativeTagCheck(app: App) {
+  // Inject `isNativeTag`
+  // this is used for component name validation (dev only)
+  Object.defineProperty(app.config, 'isNativeTag', {
+    value: () => true,
+    writable: false,
+  });
+}
+
 export const createApp: CreateAppFunction<any> = (...args) => {
   const app = renderer.createApp(...args);
+
+  injectNativeTagCheck(app);
 
   const { mount } = app;
   app.mount = () => {
