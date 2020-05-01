@@ -1,7 +1,7 @@
 import ButtonConfig from './Button';
 import ViewConfig from './View';
 import TextConfig from './Text';
-import PlainTextEditConfig from './TextInput';
+import LineEditConfig from './LineEdit';
 import ImageConfig from './Image';
 import { ValidNativeWidgets } from './nativeWidget';
 
@@ -11,7 +11,7 @@ type WidgetMap = {
 
 const widgetMap: WidgetMap = {
   'vn-button': new ButtonConfig(),
-  'vn-line-edit': new PlainTextEditConfig(),
+  'vn-line-edit': new LineEditConfig(),
   'vn-image': new ImageConfig(),
   'vn-text': new TextConfig(),
   'vn-view': new ViewConfig(),
