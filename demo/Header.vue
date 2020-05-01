@@ -1,22 +1,22 @@
 <template>
-  <div>
+  <vn-view>
     <slot name="header">
-      <p>This is the default header slot</p>
+      <vn-text>This is the default header slot</vn-text>
     </slot>
-    <p>{{line1Text}}</p>
+    <vn-text>{{line1Text}}</vn-text>
     <vn-image src="https://via.placeholder.com/150" />
-    <input @textChanged="textChanged" placeholderText="legend says you can type here" />
-    <p>Second line of text {{count}}</p>
-    <button v-on:clicked="inc" :flat="true">increment</button>
-    <button v-on:pressed="toggleView">{{viewVisible?"Hide": "Show"}} extra text</button>
-    <div :visible="viewVisible">
-      <p>This view is invisible</p>
-    </div>
-    <p :openExternalLinks="true">link to the {{link}}</p>
+    <vn-line-edit @textChanged="textChanged" placeholderText="legend says you can type here" />
+    <vn-text>Second line of text {{count}}</vn-text>
+    <vn-button v-on:clicked="inc" :flat="true">increment</vn-button>
+    <vn-button v-on:pressed="toggleView">{{viewVisible?"Hide": "Show"}} extra text</vn-button>
+    <vn-view :visible="viewVisible">
+      <vn-text>This view is invisible</vn-text>
+    </vn-view>
+    <vn-text :openExternalLinks="true">link to the {{link}}</vn-text>
     <slot>
-      <p>default slot text</p>
+      <vn-text>default slot text</vn-text>
     </slot>
-  </div>
+  </vn-view>
 </template>
 
 <script>

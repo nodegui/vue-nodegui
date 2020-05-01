@@ -1,9 +1,9 @@
 <template>
   <HelloWorld>
     <template v-slot:header>
-      <p>Here might be a page title</p>
+      <vn-text>Here might be a page title</vn-text>
     </template>
-    <p>Default slot hello content</p>
+    <vn-text>Default slot hello content</vn-text>
   </HelloWorld>
 </template>
 
