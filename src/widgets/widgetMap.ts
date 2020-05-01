@@ -17,10 +17,8 @@ const widgetMap: WidgetMap = {
   'vn-view': new ViewConfig(),
 };
 
-export const isNativeTag = (type: ValidNativeWidgets) => widgetMap[type] !== undefined;
-
 const getConfigByType = (type: ValidNativeWidgets) => {
-  if (!isNativeTag(type)) {
+  if (widgetMap[type] === undefined) {
     throw new Error(`invalid widget type ${type}`);
   }
   return widgetMap[type];

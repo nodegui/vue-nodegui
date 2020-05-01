@@ -1,6 +1,6 @@
 const path = require('path');
 const { VueLoaderPlugin } = require('vue-loader');
-const { isNativeTag } = require('./dist/widgets/nativeWidget');
+const { isNativeWidget } = require('./dist/widgets/nativeWidget');
 
 module.exports = (env = {}) => ({
   mode: env.prod ? 'production' : 'development',
@@ -25,7 +25,7 @@ module.exports = (env = {}) => ({
           loader: 'vue-loader',
           options: {
             compilerOptions: {
-              isNativeTag,
+              isNativeTag: isNativeWidget,
               directiveTransforms: {
                 model: console.log.bind(null, 'akkad bakkad'),
               },
