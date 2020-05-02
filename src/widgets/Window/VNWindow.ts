@@ -1,9 +1,8 @@
-import { QMainWindow } from '@nodegui/nodegui';
-import { VNNode } from 'widgets/config';
-import { HostNode } from '../../renderer/nodeOps';
+import { QMainWindow, NodeWidget } from '@nodegui/nodegui';
+import { VNWidget } from 'widgets/config';
 
-export class VNWindow extends QMainWindow implements VNNode<{}> {
-  insertChild(child: HostNode) {
+export class VNWindow extends QMainWindow implements VNWidget<{}> {
+  insertChild(child: NodeWidget<any>) {
     this.setCentralWidget(child);
   }
 

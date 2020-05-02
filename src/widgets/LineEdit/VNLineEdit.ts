@@ -1,5 +1,5 @@
 import { QLineEdit, EchoMode } from '@nodegui/nodegui';
-import { VNNode } from 'widgets/config';
+import { VNWidget } from 'widgets/config';
 import { PropSetters, Prop } from '../../renderer/patchProp';
 import { ViewProps, viewPropsSetters } from '../View/VNView';
 
@@ -30,7 +30,7 @@ export const lineEditPropsSetters: PropSetters<VNLineEdit, LineEditProps> = {
   },
 };
 
-export class VNLineEdit extends QLineEdit implements VNNode<LineEditProps> {
+export class VNLineEdit extends QLineEdit implements VNWidget<LineEditProps> {
   insertChild() {
     throw new Error('Cannot add child to line edits');
   }
