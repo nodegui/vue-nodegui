@@ -6,8 +6,8 @@ export abstract class VNNode<WidgetProps extends {}> {
 
     abstract patchProp(
         key: keyof WidgetProps,
-        prevValue: Prop<WidgetProps, typeof key>,
-        nextValue: Prop<WidgetProps, typeof key>,
+        prevValue: Prop<WidgetProps, keyof WidgetProps>,
+        nextValue: Prop<WidgetProps, keyof WidgetProps>,
     ): void
 }
 
@@ -16,8 +16,8 @@ export abstract class VNWidget<WidgetProps> extends NodeWidget<any> implements V
 
     abstract patchProp(
         key: keyof WidgetProps,
-        prevValue: Prop<WidgetProps, typeof key>,
-        nextValue: Prop<WidgetProps, typeof key>,
+        prevValue: Prop<WidgetProps, keyof WidgetProps>,
+        nextValue: Prop<WidgetProps, keyof WidgetProps>,
     ): void
 }
 
