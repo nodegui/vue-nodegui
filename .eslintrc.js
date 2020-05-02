@@ -26,10 +26,8 @@ module.exports = {
       "import"
     ],
     "import/resolver": {
-      "node": {
-        "extensions": [".js", ".jsx", ".ts", ".tsx"]
-      }
-    }
+      typescript: {}
+    },
   },
   "rules": {
     "no-unused-vars": 0,
@@ -53,6 +51,8 @@ module.exports = {
         "ts": "never",
       }
     ],
-    "class-methods-use-this": 0
+    "class-methods-use-this": 0,
+    "max-classes-per-file": 0,
+    'import/no-cycle': 0
   }
 }
