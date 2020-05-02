@@ -4,6 +4,7 @@ import {
 import { getLoadedPixmap } from '../../utils/image';
 import { Prop, PropSetters } from '../../renderer/patchProp';
 import { TextProps, textPropsSetters } from '../Text/VNText';
+import { VNNode } from '../config';
 
 export interface ImageProps extends TextProps {
     src?: string;
@@ -35,7 +36,7 @@ export const imagePropsSetters: PropSetters<VNImage, ImageProps> = {
   },
 };
 
-export class VNImage extends QLabel {
+export class VNImage extends QLabel implements VNNode<ImageProps> {
     originalPixmap?: QPixmap;
 
     aspectRatioMode?: AspectRatioMode;

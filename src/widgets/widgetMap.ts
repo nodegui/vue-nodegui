@@ -4,9 +4,10 @@ import TextConfig from './Text';
 import LineEditConfig from './LineEdit';
 import ImageConfig from './Image';
 import { ValidNativeWidgets } from './nativeWidget';
+import { WidgetConfig } from './config';
 
 type WidgetMap = {
-  [key in ValidNativeWidgets]: any
+  [key in ValidNativeWidgets]: WidgetConfig<any>
 }
 
 const widgetMap: WidgetMap = {

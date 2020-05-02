@@ -1,17 +1,16 @@
 import { RendererOptions } from '@vue/runtime-core';
+import { VNNode, VNWidget } from 'widgets/config';
+import { VNText } from 'widgets/Text/VNText';
+import { VNButton } from 'widgets/Button/VNButton';
 import { ValidNativeWidgets } from '../widgets/nativeWidget';
 import getConfigByType from '../widgets/widgetMap';
 import patchProp from './patchProp';
 
-// TODO: create the hostNode and hostElement types
-export type HostNode = any;
-export type HostElement = any;
-
-const nodeOps: RendererOptions<HostNode, HostElement> = {
-  insert: (child: HostNode, parent: HostElement) => {
-    parent.insertChild(child);
+const nodeOps: RendererOptions<VNWidget<any> | void, VNNode<any>> = {
+  insert: (child: VNWidget<any> | void, parent: VNNode<any>) => {
+    parent.insertChild(child as VNWidget<any>);
   },
-  remove: (child: HostNode) => {
+  remove: (child: VNWidget<any> | void) => {
     console.log('remove', child);
   },
   createElement: (type: ValidNativeWidgets) => {
@@ -28,19 +27,18 @@ const nodeOps: RendererOptions<HostNode, HostElement> = {
     console.log('create comment: ', text);
     // Maybe don't implement this yet
   },
-  setText: (node: HostNode, text: string) => {
-    // TODO: implement setText on each of the types
+  setText: (node: VNText | VNButton, text: string) => {
     node.setText(text);
   },
-  setElementText: (node: HostElement, text: string) => {
-    // TODO: implement setText on each of the types
+  setElementText: (node: VNText | VNButton, text: string) => {
     node.setText(text);
   },
-  parentNode: (node: HostNode) => {
+  parentNode: (node: VNWidget<any> | void) => {
     console.log('parent node: ', node);
     // implement this later (?)
+    return null;
   },
-  nextSibling: (node: HostNode) => {
+  nextSibling: (node: VNWidget<any> | void) => {
     console.log('next sibling: ', node);
     // implement this later (?)
   },

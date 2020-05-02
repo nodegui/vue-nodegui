@@ -1,7 +1,8 @@
 import { WidgetEventTypes } from '@nodegui/nodegui';
-import { VNImage } from './VNImage';
+import { WidgetConfig } from '../config';
+import { VNImage, ImageProps } from './VNImage';
 
-class ImageConfig {
+class ImageConfig implements WidgetConfig<ImageProps> {
     parentNode: any;
 
     createElement() {

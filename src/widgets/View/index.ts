@@ -1,6 +1,7 @@
-import { VNView } from './VNView';
+import { WidgetConfig } from 'widgets/config';
+import { VNView, ViewProps } from './VNView';
 
-class ViewConfig {
+class ViewConfig implements WidgetConfig<ViewProps> {
     parentNode: any;
 
     createElement() {

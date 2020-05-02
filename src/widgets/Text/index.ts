@@ -1,6 +1,7 @@
-import { VNText } from './VNText';
+import { WidgetConfig } from 'widgets/config';
+import { VNText, TextProps } from './VNText';
 
-class TextConfig {
+class TextConfig implements WidgetConfig<TextProps> {
     parentNode: any;
 
     createElement() {

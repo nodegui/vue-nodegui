@@ -1,5 +1,6 @@
 import { RendererOptions } from '@vue/runtime-core';
 import { NodeWidget, NativeElement } from '@nodegui/nodegui';
+import { VNWidget, VNNode } from 'widgets/config';
 
 export type Prop<T, key extends keyof T> = Required<T>[key];
 
@@ -26,8 +27,8 @@ export const patchEvent = (
   }
 };
 
-const patchProp: RendererOptions['patchProp'] = (
-  el,
+const patchProp: RendererOptions<VNWidget<any> | void, VNNode<any>>['patchProp'] = (
+  el: VNWidget<any>,
   key,
   prevValue,
   nextValue,
@@ -39,7 +40,7 @@ const patchProp: RendererOptions['patchProp'] = (
 ) => {
   const isEvent = key[0] === 'o' && key[1] === 'n'; // This is more efficient than slicing. Don't change
   if (isEvent) {
-    patchEvent(key.slice(2), el as NodeWidget<any>, prevValue, nextValue);
+    patchEvent(key.slice(2), el, prevValue, nextValue);
     return;
   }
   el.patchProp(key, prevValue, nextValue);

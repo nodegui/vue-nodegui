@@ -1,6 +1,7 @@
-import { VNButton } from './VNButton';
+import { VNButton, ButtonProps } from './VNButton';
+import { WidgetConfig } from '../config';
 
-class ButtonConfig {
+class ButtonConfig implements WidgetConfig<ButtonProps> {
     parentNode: any;
 
     createElement() {

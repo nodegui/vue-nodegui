@@ -1,4 +1,5 @@
 import { QLabel } from '@nodegui/nodegui';
+import { VNNode } from 'widgets/config';
 import { PropSetters, Prop } from '../../renderer/patchProp';
 import { ViewProps, viewPropsSetters } from '../View/VNView';
 
@@ -21,7 +22,7 @@ export const textPropsSetters: PropSetters<VNText, TextProps> = {
   },
 };
 
-export class VNText extends QLabel {
+export class VNText extends QLabel implements VNNode<TextProps> {
   insertChild() {
     throw new Error('Cannot add child to text elements');
   }

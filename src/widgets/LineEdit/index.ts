@@ -1,6 +1,7 @@
-import { VNLineEdit } from './VNLineEdit';
+import { WidgetConfig } from 'widgets/config';
+import { VNLineEdit, LineEditProps } from './VNLineEdit';
 
-class LineEditConfig {
+class LineEditConfig implements WidgetConfig<LineEditProps> {
     parentNode: any;
 
     createElement() {

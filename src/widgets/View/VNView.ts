@@ -1,6 +1,7 @@
 import {
   QWidget, FlexLayout, NodeWidget,
 } from '@nodegui/nodegui';
+import { VNNode } from 'widgets/config';
 import { PropSetters, Prop } from '../../renderer/patchProp';
 
 export interface ViewProps {
@@ -69,7 +70,7 @@ export const viewPropsSetters: PropSetters<VNView, ViewProps> = {
   },
 };
 
-export class VNView extends QWidget {
+export class VNView extends QWidget implements VNNode<ViewProps> {
   insertChild(child: NodeWidget<any>) {
     if (!child) {
       return;
