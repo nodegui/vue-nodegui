@@ -38,8 +38,11 @@ const patchProp: RendererOptions<VNWidget<any> | void, VNNode<any>>['patchProp']
   // parentSuspense,
   // unmountChildren,
 ) => {
-  const isEvent = key[0] === 'o' && key[1] === 'n'; // This is more efficient than slicing. Don't change
-  if (isEvent) {
+  const isEvent = key.startsWith('on');
+  const isModelKey = key.startsWith('onUpdate:');
+  // ignore model keys because they'll
+  // be handled by vModel directive
+  if (isEvent && !isModelKey) {
     patchEvent(key.slice(2), el, prevValue, nextValue);
     return;
   }
