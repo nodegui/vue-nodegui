@@ -5,7 +5,7 @@
     </slot>
     <vn-text>{{line1Text}}</vn-text>
     <vn-image src="https://via.placeholder.com/150" />
-    <vn-line-edit @textChanged="textChanged" placeholderText="legend says you can type here" />
+    <vn-line-edit v-model="line1Text" placeholderText="legend says you can type here" />
     <vn-text>Second line of text {{count}}</vn-text>
     <vn-button v-on:clicked="inc" :flat="true">increment</vn-button>
     <vn-button v-on:pressed="toggleView">{{viewVisible?"Hide": "Show"}} extra text</vn-button>
@@ -32,11 +32,7 @@ export default {
     }
 
     const toggleView = () => {
-      viewVisible.value = !viewVisible.value;
-    }
-
-    const textChanged = (e) => {
-      line1Text.value = e;
+      line1Text.value = !viewVisible.value;
     }
 
     const link = `<a 
@@ -50,7 +46,6 @@ export default {
       inc,
       viewVisible,
       toggleView,
-      textChanged,
       line1Text,
       link
     };
