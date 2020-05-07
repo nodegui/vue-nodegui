@@ -27,6 +27,7 @@
   "homepage": "https://github.com/shubhamzanwar/vue-nodegui#readme",
   "dependencies": {
     "@nodegui/nodegui": "^0.13.4",
+    "@vue/compiler-core": "^3.0.0-beta.9",
     "@vue/runtime-core": "3.0.0-beta.4",
     "phin": "^3.4.1"
   },
