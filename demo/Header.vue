@@ -32,7 +32,7 @@ export default {
     }
 
     const toggleView = () => {
-      line1Text.value = !viewVisible.value;
+      viewVisible.value = !viewVisible.value;
     }
 
     const link = `<a 
