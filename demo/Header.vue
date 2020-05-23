@@ -9,7 +9,7 @@
     <vn-text>Second line of text {{count}}</vn-text>
     <vn-button v-on:clicked="inc" :flat="true">increment</vn-button>
     <vn-button v-on:pressed="toggleView">{{viewVisible?"Hide": "Show"}} extra text</vn-button>
-    <vn-view :visible="viewVisible">
+    <vn-view v-show="viewVisible">
       <vn-text>This view is invisible</vn-text>
     </vn-view>
     <vn-text :openExternalLinks="true">link to the {{link}}</vn-text>
