@@ -3,6 +3,8 @@ import { VNLineEdit } from 'widgets/LineEdit/VNLineEdit';
 
 type ModelDirective<T> = ObjectDirective<T & { _assign: Function }>
 
+// TODO: implement for other inputs as they are added
+// Currently only implemented for text input
 export const vModelText: ModelDirective<VNLineEdit> = {
   beforeMount: (el, { value }, vnode) => {
     el.setText(value);
