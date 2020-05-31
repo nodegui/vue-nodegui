@@ -9,7 +9,7 @@
     <vn-text>Second line of text {{count}}</vn-text>
     <vn-button v-on:clicked="inc" :flat="true">increment</vn-button>
     <vn-button v-on:pressed="toggleView">{{viewVisible?"Hide": "Show"}} extra text</vn-button>
-    <vn-view v-show="viewVisible">
+    <vn-view v-if="viewVisible">
       <vn-text>This view is invisible</vn-text>
     </vn-view>
     <vn-text :openExternalLinks="true">link to the {{link}}</vn-text>
@@ -25,7 +25,7 @@ import { ref } from 'vue';
 export default {
   setup() {
     const count = ref(0);
-    const viewVisible = ref(false);
+    const viewVisible = ref(true);
     const line1Text = ref('Type whatever you want in the text box below');
     const inc = () => {
       count.value++;
