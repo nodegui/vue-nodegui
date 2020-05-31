@@ -1,7 +1,7 @@
 import { NodeWidget, Component } from '@nodegui/nodegui';
 import { Prop } from 'renderer/patchProp';
 
-export abstract class VNNode<WidgetProps extends {}> {
+export abstract class VNNode<WidgetProps extends {}> extends NodeWidget<any> {
     abstract insertChild(child: Component): void;
 
     abstract patchProp(
@@ -9,6 +9,8 @@ export abstract class VNNode<WidgetProps extends {}> {
         prevValue: Prop<WidgetProps, keyof WidgetProps>,
         nextValue: Prop<WidgetProps, keyof WidgetProps>,
     ): void
+
+    abstract removeChild(child: Component): void;
 }
 
 export abstract class VNWidget<WidgetProps> extends NodeWidget<any> implements VNNode<WidgetProps> {
@@ -19,6 +21,8 @@ export abstract class VNWidget<WidgetProps> extends NodeWidget<any> implements V
         prevValue: Prop<WidgetProps, keyof WidgetProps>,
         nextValue: Prop<WidgetProps, keyof WidgetProps>,
     ): void
+
+    abstract removeChild(child: NodeWidget<any>): void;
 }
 
 export abstract class WidgetConfig<WidgetProps> {

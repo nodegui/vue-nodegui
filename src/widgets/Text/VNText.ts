@@ -35,4 +35,8 @@ export class VNText extends QLabel implements VNWidget<TextProps> {
     const propSetter = textPropsSetters[key];
     if (propSetter !== undefined) { propSetter(this, prevValue as never, nextValue as never); }
   }
+
+  removeChild() {
+    throw new Error('Cannot remove/add child to text elements');
+  }
 }

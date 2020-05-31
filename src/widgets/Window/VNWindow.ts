@@ -8,4 +8,12 @@ export class VNWindow extends QMainWindow implements VNWidget<{}> {
 
   // TODO: window widget not implemented yet
   patchProp() {}
+
+  removeChild(child: NodeWidget<any>) {
+    const removedChild = this.takeCentralWidget();
+    if (removedChild) {
+      removedChild.close();
+    }
+    child.close();
+  }
 }

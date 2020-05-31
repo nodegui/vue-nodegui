@@ -92,4 +92,13 @@ export class VNView extends QWidget implements VNWidget<ViewProps> {
     const propSetter = viewPropsSetters[key];
     if (propSetter !== undefined) { propSetter(this, prevValue as never, nextValue as never); }
   }
+
+  removeChild(child: NodeWidget<any>) {
+    if (!this.layout) {
+      console.warn('parent has no layout to remove child from');
+      return;
+    }
+    this.layout.removeWidget(child);
+    child.close();
+  }
 }

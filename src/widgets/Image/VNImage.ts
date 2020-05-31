@@ -82,4 +82,8 @@ export class VNImage extends QLabel implements VNWidget<ImageProps> {
       const propSetter = imagePropsSetters[key];
       if (propSetter !== undefined) { propSetter(this, prevValue as never, nextValue as never); }
     }
+
+    removeChild() {
+      throw new Error('Cannot remove/add child to image elements');
+    }
 }

@@ -30,4 +30,8 @@ export class VNButton extends QPushButton implements VNWidget<ButtonProps> {
     const propSetter = buttonPropsSetters[key];
     if (propSetter !== undefined) { propSetter(this, prevValue as never, nextValue as never); }
   }
+
+  removeChild() {
+    throw new Error('Cannot remove/add child to buttons');
+  }
 }
