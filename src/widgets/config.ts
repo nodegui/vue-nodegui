@@ -11,6 +11,8 @@ export abstract class VNNode<WidgetProps extends {}> extends NodeWidget<any> {
     ): void
 
     abstract removeChild(child: Component): void;
+
+    abstract insertBefore(child: Component, beforeChild: Component): void;
 }
 
 export abstract class VNWidget<WidgetProps> extends NodeWidget<any> implements VNNode<WidgetProps> {
@@ -23,6 +25,11 @@ export abstract class VNWidget<WidgetProps> extends NodeWidget<any> implements V
     ): void
 
     abstract removeChild(child: NodeWidget<any>): void;
+
+    abstract insertBefore(
+        child: NodeWidget<any>,
+        beforeChild: NodeWidget<any>
+    ): void;
 }
 
 export abstract class WidgetConfig<WidgetProps> {

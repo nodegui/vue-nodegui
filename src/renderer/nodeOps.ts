@@ -10,8 +10,11 @@ import patchProp from './patchProp';
 const nodeOps: RendererOptions<VNWidget<any>, VNNode<any>> = {
   insert: (child: VNWidget<any>, parent: VNNode<any>, anchor) => {
     // TODO: implement insertBefore in widgets
-    if (anchor) { console.log({ anchor }); }
-    parent.insertChild(child as VNWidget<any>);
+    if (anchor) {
+      parent.insertBefore(child, anchor);
+    } else {
+      parent.insertChild(child as VNWidget<any>);
+    }
     (child as VNWidget<any>).setNodeParent(parent);
   },
   remove: (child: VNWidget<any>) => {
