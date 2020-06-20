@@ -86,4 +86,8 @@ export class VNImage extends QLabel implements VNWidget<ImageProps> {
     removeChild() {
       throw new Error('Cannot remove/add child to image elements');
     }
+
+    insertBefore() {
+      throw new Error('Cannot add child to image elements');
+    }
 }

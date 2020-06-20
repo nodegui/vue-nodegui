@@ -47,4 +47,8 @@ export class VNLineEdit extends QLineEdit implements VNWidget<LineEditProps> {
   removeChild() {
     throw new Error('Cannot remove/add child to line edits');
   }
+
+  insertBefore() {
+    throw new Error('Cannot add child to line edits');
+  }
 }

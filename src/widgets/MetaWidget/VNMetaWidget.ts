@@ -18,4 +18,8 @@ export class VNMetaWidget extends QWidget implements VNWidget<{}> {
   removeChild() {
     throw new Error('cannot add props to meta widgets');
   }
+
+  insertBefore() {
+    throw new Error('Cannot add child to meta widgets');
+  }
 }

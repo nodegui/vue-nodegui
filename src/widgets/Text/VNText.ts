@@ -39,4 +39,8 @@ export class VNText extends QLabel implements VNWidget<TextProps> {
   removeChild() {
     throw new Error('Cannot remove/add child to text elements');
   }
+
+  insertBefore() {
+    throw new Error('Cannot add child to text elements');
+  }
 }

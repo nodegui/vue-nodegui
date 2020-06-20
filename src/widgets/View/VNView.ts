@@ -101,4 +101,13 @@ export class VNView extends QWidget implements VNWidget<ViewProps> {
     this.layout.removeWidget(child);
     child.close();
   }
+
+  insertBefore(child: NodeWidget<any>, beforeChild: NodeWidget<any>) {
+    if (!this.layout) {
+      console.warn('parent has no layout to remove child from');
+      return;
+    }
+
+    (this.layout as FlexLayout).insertChildBefore(child, beforeChild);
+  }
 }

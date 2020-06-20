@@ -16,4 +16,10 @@ export class VNWindow extends QMainWindow implements VNWidget<{}> {
     }
     child.close();
   }
+
+  insertBefore(child: NodeWidget<any>) {
+    if (!this.centralWidget) {
+      this.insertChild(child);
+    }
+  }
 }

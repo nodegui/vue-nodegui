@@ -34,4 +34,8 @@ export class VNButton extends QPushButton implements VNWidget<ButtonProps> {
   removeChild() {
     throw new Error('Cannot remove/add child to buttons');
   }
+
+  insertBefore() {
+    throw new Error('Cannot add child to buttons');
+  }
 }
