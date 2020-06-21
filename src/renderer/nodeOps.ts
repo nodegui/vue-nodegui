@@ -41,6 +41,8 @@ const nodeOps: RendererOptions<VNWidget<any>, VNNode<any>> = {
     }
     return null;
   },
+  // TODO: fix nextSibling for implementation
+  // in v-if
   nextSibling: () => null,
   patchProp,
 };
