@@ -41,9 +41,10 @@ const nodeOps: RendererOptions<VNWidget<any>, VNNode<any>> = {
     }
     return null;
   },
-  // TODO: fix nextSibling for implementation
-  // in v-if
-  nextSibling: () => null,
+  nextSibling: (node) => {
+    const nodeParent = node.nodeParent as VNNode<any>;
+    return nodeParent.getNextSibling(node) as VNWidget<any>;
+  },
   patchProp,
 };
 
