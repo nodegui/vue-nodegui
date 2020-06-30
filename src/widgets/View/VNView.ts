@@ -110,4 +110,8 @@ export class VNView extends QWidget implements VNWidget<ViewProps> {
 
     (this.layout as FlexLayout).insertChildBefore(child, beforeChild);
   }
+
+  getNextSibling(child: NodeWidget<any>): NodeWidget<any> | null {
+    return (this.layout as FlexLayout).getNextSibling(child);
+  }
 }

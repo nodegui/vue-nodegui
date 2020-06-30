@@ -1,5 +1,5 @@
 import {
-  QLabel, QPixmap, AspectRatioMode, TransformationMode, QSize,
+  QLabel, QPixmap, AspectRatioMode, TransformationMode, QSize, NodeWidget,
 } from '@nodegui/nodegui';
 import { getLoadedPixmap } from '../../utils/image';
 import { Prop, PropSetters } from '../../renderer/patchProp';
@@ -89,5 +89,9 @@ export class VNImage extends QLabel implements VNWidget<ImageProps> {
 
     insertBefore() {
       throw new Error('Cannot add child to image elements');
+    }
+
+    getNextSibling(): NodeWidget<any> | null {
+      throw new Error('image cannot have children');
     }
 }

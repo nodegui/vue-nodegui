@@ -22,4 +22,9 @@ export class VNWindow extends QMainWindow implements VNWidget<{}> {
       this.insertChild(child);
     }
   }
+
+  getNextSibling(): null {
+    // window can only have a single central widget
+    return null;
+  }
 }

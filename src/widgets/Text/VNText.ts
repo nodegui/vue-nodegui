@@ -1,4 +1,4 @@
-import { QLabel } from '@nodegui/nodegui';
+import { QLabel, NodeWidget } from '@nodegui/nodegui';
 import { VNWidget } from 'widgets/config';
 import { PropSetters, Prop } from '../../renderer/patchProp';
 import { ViewProps, viewPropsSetters } from '../View/VNView';
@@ -42,5 +42,9 @@ export class VNText extends QLabel implements VNWidget<TextProps> {
 
   insertBefore() {
     throw new Error('Cannot add child to text elements');
+  }
+
+  getNextSibling(): NodeWidget<any> | null {
+    throw new Error('text elements cannot have children');
   }
 }

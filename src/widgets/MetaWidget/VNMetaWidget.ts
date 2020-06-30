@@ -1,4 +1,4 @@
-import { QWidget } from '@nodegui/nodegui';
+import { QWidget, NodeWidget } from '@nodegui/nodegui';
 import { VNWidget } from 'widgets/config';
 
 export class VNMetaWidget extends QWidget implements VNWidget<{}> {
@@ -21,5 +21,9 @@ export class VNMetaWidget extends QWidget implements VNWidget<{}> {
 
   insertBefore() {
     throw new Error('Cannot add child to meta widgets');
+  }
+
+  getNextSibling(): NodeWidget<any> | null {
+    throw new Error('meta widget cannot have children');
   }
 }

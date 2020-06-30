@@ -1,4 +1,4 @@
-import { QPushButton } from '@nodegui/nodegui';
+import { QPushButton, NodeWidget } from '@nodegui/nodegui';
 import { VNWidget } from '../config';
 import { viewPropsSetters, ViewProps } from '../View/VNView';
 import { PropSetters, Prop } from '../../renderer/patchProp';
@@ -37,5 +37,9 @@ export class VNButton extends QPushButton implements VNWidget<ButtonProps> {
 
   insertBefore() {
     throw new Error('Cannot add child to buttons');
+  }
+
+  getNextSibling(): NodeWidget<any> | null {
+    throw new Error('buttons cannot have children');
   }
 }
