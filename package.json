@@ -26,7 +26,7 @@
   },
   "homepage": "https://github.com/shubhamzanwar/vue-nodegui#readme",
   "dependencies": {
-    "@nodegui/nodegui": "https://github.com/nodegui/nodegui/archive/v0.0.0-latest-master.tar.gz",
+    "@nodegui/nodegui": "https://github.com/nodegui/nodegui/releases/download/v0.0.0-latest-master/nodegui-master.tgz",
     "@vue/compiler-core": "^3.0.0-beta.15",
     "@vue/runtime-core": "3.0.0-beta.14",
     "phin": "^3.5.0"
