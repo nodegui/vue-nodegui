@@ -26,8 +26,8 @@
   },
   "homepage": "https://github.com/shubhamzanwar/vue-nodegui#readme",
   "dependencies": {
-    "@nodegui/nodegui": "https://github.com/nodegui/nodegui/releases/download/v0.0.0-latest-master/nodegui-master.tgz",
-    "@vue/compiler-core": "^3.0.0-beta.15",
+    "@nodegui/nodegui": "^0.24.0",
+    "@vue/compiler-core": "^3.0.0-beta.18",
     "@vue/runtime-core": "3.0.0-beta.14",
     "phin": "^3.5.0"
   },
@@ -35,7 +35,7 @@
     "@types/node": "^13.13.12",
     "@typescript-eslint/eslint-plugin": "^2.34.0",
     "@typescript-eslint/parser": "^2.34.0",
-    "@vue/compiler-sfc": "^3.0.0-beta.15",
+    "@vue/compiler-sfc": "^3.0.0-beta.18",
     "css-loader": "^3.6.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.2.0",
@@ -48,7 +48,7 @@
     "mini-css-extract-plugin": "^0.9.0",
     "node-loader": "^0.6.0",
     "ts-transformer-imports": "^0.4.3",
-    "typescript": "^3.9.5",
+    "typescript": "^3.9.6",
     "url-loader": "^3.0.0",
     "vue-loader": "^16.0.0-beta.3",
     "webpack": "^4.43.0",
