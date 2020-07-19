@@ -1,6 +1,6 @@
 module.exports = {
   title: 'Vue NodeGui',
-  tagline: 'Build performant, native, cross platform desktop apps with Vue',
+  tagline: 'Build performant, native, cross platform desktop apps with Vue 🚀',
   url: 'https://shubhamzanwar.github.io',
   baseUrl: '/',
   favicon: 'img/favicon.ico',
