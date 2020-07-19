@@ -1,6 +1,19 @@
 module.exports = {
-  someSidebar: {
-    Docusaurus: ['doc1', 'doc2', 'doc3'],
-    Features: ['mdx'],
+  "guides": {
+    "The basics": [
+      "guides/doc1",
+      "guides/doc2",
+      "guides/doc3",
+      "guides/mdx"
+    ]
   },
+  "api": {
+    "Widgets": [
+      "api/interfaces/buttonprops",
+      "api/interfaces/imageprops",
+      "api/interfaces/lineeditprops",
+      "api/interfaces/textprops",
+      "api/interfaces/viewprops"
+    ]
+  }
 };

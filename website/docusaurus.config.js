@@ -15,9 +15,15 @@ module.exports = {
       },
       links: [
         {
-          to: 'docs/',
-          activeBasePath: 'docs',
+          to: 'docs/guides/doc1',
           label: 'Docs',
+          activeBasePath: 'docs/guides',
+          position: 'right',
+        },
+        {
+          to: 'docs/api/interfaces/buttonprops',
+          label: 'API',
+          activeBasePath: 'docs/api',
           position: 'right',
         },
         {to: 'blog', label: 'Blog', position: 'right'},
@@ -76,7 +82,7 @@ module.exports = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Shubham Zanwar.`,
     },
   },
   presets: [
@@ -84,18 +90,10 @@ module.exports = {
       '@docusaurus/preset-classic',
       {
         docs: {
-          // It is recommended to set document id as docs home page (`docs/` path).
-          homePageId: 'doc1',
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          editUrl:
-            'https://github.com/shubhamzanwar/vue-nodegui/edit/master/website/',
         },
         blog: {
           showReadingTime: true,
-          // Please change this to your repo.
-          editUrl:
-            'https://github.com/shubhamzanwar/vue-nodegui/edit/master/website/blog/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
