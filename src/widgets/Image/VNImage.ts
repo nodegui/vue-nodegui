@@ -36,6 +36,7 @@ export const imagePropsSetters: PropSetters<VNImage, ImageProps> = {
   },
 };
 
+/** @internal */
 export class VNImage extends QLabel implements VNWidget<ImageProps> {
     originalPixmap?: QPixmap;
 

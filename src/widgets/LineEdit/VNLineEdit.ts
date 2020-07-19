@@ -30,6 +30,7 @@ export const lineEditPropsSetters: PropSetters<VNLineEdit, LineEditProps> = {
   },
 };
 
+/** @internal */
 export class VNLineEdit extends QLineEdit implements VNWidget<LineEditProps> {
   insertChild() {
     throw new Error('Cannot add child to line edits');

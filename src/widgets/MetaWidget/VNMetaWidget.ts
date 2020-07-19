@@ -1,6 +1,7 @@
 import { QWidget, NodeWidget } from '@nodegui/nodegui';
 import { VNWidget } from 'widgets/config';
 
+/** @internal */
 export class VNMetaWidget extends QWidget implements VNWidget<{}> {
   constructor() {
     super();

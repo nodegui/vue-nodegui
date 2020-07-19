@@ -70,6 +70,7 @@ export const viewPropsSetters: PropSetters<VNView, ViewProps> = {
   },
 };
 
+/** @internal */
 export class VNView extends QWidget implements VNWidget<ViewProps> {
   insertChild(child: NodeWidget<any>) {
     if (!child) {

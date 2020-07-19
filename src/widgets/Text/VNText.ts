@@ -22,6 +22,7 @@ export const textPropsSetters: PropSetters<VNText, TextProps> = {
   },
 };
 
+/** @internal */
 export class VNText extends QLabel implements VNWidget<TextProps> {
   insertChild() {
     throw new Error('Cannot add child to text elements');
