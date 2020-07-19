@@ -21,5 +21,29 @@
     ],
     "exclude": [
         "node_modules"
-    ]
+    ],
+    "typedocOptions": {
+      "mode": "file",
+      "out": "./website/docs/api",
+      "plugin": ["typedoc-plugin-markdown"],
+      "exclude": [
+        "**/renderer/**",
+        "**/utils/**",
+        "**/widgets/**/index.ts",
+        "**/widgets/config.ts",
+        "**/widgets/nativeWidget.ts",
+        "**/widgets/widgetMap.ts",
+        "vueLoader.ts",
+        "index.ts"
+      ],
+      "excludeExternals": true,
+      "excludeNotExported": true,
+      "excludePrivate": true,
+      "excludeProtected": true,
+      "includeDeclarations": true,
+      "hideBreadcrumbs": true,
+      "hideSources": true,
+      "theme": "docusaurus2",
+      "stripInternal": true
+    }
 }
