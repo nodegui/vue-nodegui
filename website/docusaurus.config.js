@@ -42,12 +42,12 @@ module.exports = {
           title: 'Docs',
           items: [
             {
-              label: 'Style Guide',
-              to: 'docs/',
+              label: 'Get Started',
+              to: '/docs/guides/doc1',
             },
             {
-              label: 'Second Doc',
-              to: 'docs/doc2/',
+              label: 'API guide',
+              to: 'docs/api/interfaces/buttonprops',
             },
           ],
         },
@@ -64,7 +64,7 @@ module.exports = {
             },
             {
               label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
+              href: 'https://twitter.com/szanwar22',
             },
           ],
         },
