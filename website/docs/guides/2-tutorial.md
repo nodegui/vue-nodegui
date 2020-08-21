@@ -27,21 +27,30 @@ The `@nodegui/vue-nodegui` module exports widgets and features in namespaces. As
 using the `Window` component. A simple `main.js` file might open a window:
 
 ```javascript
-const { Window, Renderer } = require("@nodegui/vue-nodegui");
+import { createApp } from '@nodegui/vue-nodegui';
+import App from './App.vue';
 
-const App = () => {
-  return <Window></Window>;
-};
-
-Renderer.render(<App />);
+createApp(App).mount();
 ```
 
-The `index.js` should create windows and handle all the system events your
+Add the following code to your `App.vue` file:
+
+```html
+<template>
+</template>
+
+<script>
+  export default { }
+</script>
+
+```
+
+The `main.js` should create windows and handle all the system events your
 application might encounter.
 
 ## What's going on here?
 
-Firstly, we are running a Node.js app and not a browser based app. This means we do not have access to any browser APIs. The window you see is actually a native widget created by Qt. Window component is essentially a lightweight javascript wrapper over NodeGui's QMainWindow, which internally is Qt's QMainWindow. Hence every prop you set on Window instance is actually affecting a native window widget. This is very light weight as compared to browser based solutions and hence is more closer to the Operating system.
+Firstly, we are running a Node.js app and not a browser based app. This means we do not have access to any browser APIs. The window you see is actually a native widget created by Qt. Window component is essentially a lightweight javascript wrapper over NodeGui's QMainWindow, which internally is Qt's QMainWindow. This component is automatically created by the `createApp` function. In future releases, you will be able to add props to this component too. This is very light weight as compared to browser based solutions and hence is more closer to the Operating system.
 
 ## Trying out the starter project
 
