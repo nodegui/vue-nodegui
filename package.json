@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint --ext ts .",
     "build": "tsc",
-    "dev": "npm run build && webpack -p && qode --inspect ./demo-dist/main.js"
+    "dev": "npm run build && webpack -p && qode --inspect ./demo-dist/main.js",
+    "docs": "rm -rf ./website/docs/api && typedoc && rm ./website/docs/api/globals.md ./website/docs/api/index.md"
   },
   "repository": {
     "type": "git",
