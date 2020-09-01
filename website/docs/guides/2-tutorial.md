@@ -62,14 +62,15 @@ Clone and run the code by using the
 ```sh
 # Clone the repository
 $ git clone https://github.com/nodegui/vue-nodegui-starter
+
 # Go into the repository
 $ cd vue-nodegui-starter
+
 # Install dependencies
 $ npm install
+
 # Run the dev server
 $ npm run dev
-# Run the app on a separate terminal tab or window
-$ npm start
 ```
 
 [quick-start]: https://github.com/nodegui/vue-nodegui-starter
