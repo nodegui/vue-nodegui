@@ -3,9 +3,6 @@ import { VNWidget } from '../config';
 import { viewPropsSetters, ViewProps } from '../View/VNView';
 import { PropSetters, Prop } from '../../renderer/patchProp';
 
-/**
- * @alias VN-Button
- */
 export interface ButtonProps extends ViewProps {
   /**
    * Sets whether the button border is raised. [QPushButton: setFlat](https://docs.nodegui.org/docs/api/QPushButton#buttonsetflatisflat)

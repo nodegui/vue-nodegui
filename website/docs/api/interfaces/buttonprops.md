@@ -4,8 +4,6 @@ title: "ButtonProps"
 sidebar_label: "ButtonProps"
 ---
 
-**`alias`** VN-Button
-
 ## Hierarchy
 
 * [ViewProps](viewprops.md)
