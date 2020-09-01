@@ -3,7 +3,7 @@ module.exports = {
     "The basics": [
       "guides/1-getting-started",
       "guides/2-tutorial",
-      "guides/doc3",
+      "guides/3-styling",
       "guides/mdx"
     ]
   },
