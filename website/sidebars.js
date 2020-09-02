@@ -4,6 +4,7 @@ module.exports = {
       "guides/1-getting-started",
       "guides/2-tutorial",
       "guides/3-styling",
+      "guides/4-layout",
       "guides/mdx"
     ]
   },
