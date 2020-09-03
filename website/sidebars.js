@@ -6,7 +6,8 @@ module.exports = {
       "guides/3-styling",
       "guides/4-layout",
       "guides/5-handle-events",
-      "guides/mdx"
+      "guides/6-images",
+      "guides/7-networking",
     ]
   },
   "api": {
