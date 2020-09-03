@@ -48,6 +48,53 @@ FlexLayout allows the children to expand and shrink dynamically based on availab
 
 Flexbox is designed to provide a consistent layout on different screen sizes. You will normally use a combination of flex-direction, align-items,and justify-content to achieve the right layout.
 
-### Example:
+### Example
 
-Lets say you want to build a UI that has a parent view which has two child components. One a label with text Hello and another a view with background color white. Now you want the label to occupy 1/3 of the available height while the white colored child view to occupy the remaining 2/3 height.
+Lets say you want to build a UI that has a parent view which has two child components. One a label with text Hello and another a view with background color white. Now you want the label to occupy 1/4 of the available height while the white colored child view to occupy the remaining 3/4 height.
+
+![simple flex layout](/img/flex-simple.png)
+
+The code for that would look something like below:
+
+```html
+<!-- App.vue -->
+
+<template>
+  <vn-view id="root" :styleSheet="viewStyles">
+      <vn-text id="title">Hello world</vn-text>
+      <vn-view id="spacer" />
+  </vn-view>
+</template>
+
+<script>
+export default {
+    setup() {
+        return {
+            viewStyles: `
+                #root {
+                    background-color: green;
+                }
+
+                #title {
+                    flex: 1;
+                    background-color: blue;
+                }
+
+                #spacer {
+                    flex: 3;
+                }
+            `
+        }
+    }
+}
+</script>
+```
+
+To know more on how FlexBox layout works in depth you can visit: https://facebook.github.io/react-native/docs/0.60/flexbox.
+NodeGui uses the same library that React Native uses underneath for FlexBox ([Yoga](https://github.com/facebook/yoga)).
+
+> You can specify layout properties via inline styles also.
+
+## Conclusion
+
+The primary layout in Vue NodeGui is the Flexbox layout. Flexbox layout can be controlled via stylesheet just as in web. So both paint and layout properties are available at the same place.
