@@ -1,9 +1,9 @@
 import { QPushButton, NodeWidget } from '@nodegui/nodegui';
+import { AbstractButtonProps, abstractButtonPropSetters } from 'widgets/AbstractButton/VNAbstractButton';
 import { VNWidget } from '../config';
-import { viewPropsSetters, ViewProps } from '../View/VNView';
 import { PropSetters, Prop } from '../../renderer/patchProp';
 
-export interface ButtonProps extends ViewProps {
+export interface ButtonProps extends AbstractButtonProps {
   /**
    * Sets whether the button border is raised. [QPushButton: setFlat](https://docs.nodegui.org/docs/api/QPushButton#buttonsetflatisflat)
    */
@@ -11,7 +11,7 @@ export interface ButtonProps extends ViewProps {
 }
 
 export const buttonPropsSetters: PropSetters<VNButton, ButtonProps> = {
-  ...viewPropsSetters,
+  ...abstractButtonPropSetters,
   flat: (widget: VNButton, _, nextValue: boolean) => {
     widget.setFlat(nextValue);
   },
