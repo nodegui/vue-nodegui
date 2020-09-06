@@ -7,8 +7,8 @@ module.exports = {
       "guides/4-layout",
       "guides/5-handle-events",
       "guides/6-images",
-      "guides/7-networking",
-    ]
+      "guides/7-networking"
+    ],
   },
   "api": {
     "Widgets": [
@@ -16,6 +16,7 @@ module.exports = {
       "api/interfaces/checkboxprops",
       "api/interfaces/imageprops",
       "api/interfaces/lineeditprops",
+      "api/interfaces/radiobuttonprops",
       "api/interfaces/textprops",
       "api/interfaces/viewprops"
     ]
