@@ -1,8 +1,8 @@
 import {
   QIcon, QSize, QAbstractButtonSignals, QAbstractButton,
 } from '@nodegui/nodegui';
-import { ViewProps, viewPropsSetters } from 'widgets/View/VNView';
 import { PropSetters } from 'renderer/patchProp';
+import { ViewProps, viewPropsSetters } from '../View/VNView';
 
 /** @internal */
 export interface AbstractButtonProps extends ViewProps {

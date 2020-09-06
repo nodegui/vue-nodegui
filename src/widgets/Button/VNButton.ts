@@ -1,5 +1,5 @@
 import { QPushButton, NodeWidget } from '@nodegui/nodegui';
-import { AbstractButtonProps, abstractButtonPropSetters } from 'widgets/AbstractButton/VNAbstractButton';
+import { AbstractButtonProps, abstractButtonPropSetters } from '../AbstractButton/VNAbstractButton';
 import { VNWidget } from '../config';
 import { PropSetters, Prop } from '../../renderer/patchProp';
 
