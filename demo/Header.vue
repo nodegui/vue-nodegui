@@ -16,6 +16,7 @@
     <slot>
       <vn-text>default slot text</vn-text>
     </slot>
+    <vn-checkbox>checkbox label</vn-checkbox>
   </vn-view>
 </template>
 

@@ -1,4 +1,4 @@
-export type ValidNativeWidgets = 'vn-image' | 'vn-text' | 'vn-view' | 'vn-line-edit' | 'vn-button';
+export type ValidNativeWidgets = 'vn-image' | 'vn-text' | 'vn-view' | 'vn-line-edit' | 'vn-button' | 'vn-checkbox';
 
 // Add vue-nodegui widgets here
 // whenever new ones are created
@@ -8,6 +8,7 @@ const nativeWidgets: {[key in ValidNativeWidgets]: boolean} = {
   'vn-button': true,
   'vn-image': true,
   'vn-line-edit': true,
+  'vn-checkbox': true,
 };
 
 export const isNativeWidget = (type: ValidNativeWidgets) => !!nativeWidgets[type];
