@@ -17,6 +17,7 @@
       <vn-text>default slot text</vn-text>
     </slot>
     <vn-checkbox>checkbox label</vn-checkbox>
+    <vn-radio-button>radio-button label</vn-radio-button>
   </vn-view>
 </template>
 
