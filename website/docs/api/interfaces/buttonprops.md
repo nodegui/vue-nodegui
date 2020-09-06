@@ -6,7 +6,7 @@ sidebar_label: "ButtonProps"
 
 ## Hierarchy
 
-* [ViewProps](viewprops.md)
+* AbstractButtonProps
 
   ↳ **ButtonProps**
 
@@ -16,10 +16,13 @@ sidebar_label: "ButtonProps"
 
 * [enabled](buttonprops.md#optional-enabled)
 * [flat](buttonprops.md#optional-flat)
+* [icon](buttonprops.md#optional-icon)
+* [iconSize](buttonprops.md#optional-iconsize)
 * [id](buttonprops.md#optional-id)
 * [mouseTracking](buttonprops.md#optional-mousetracking)
 * [style](buttonprops.md#optional-style)
 * [styleSheet](buttonprops.md#optional-stylesheet)
+* [text](buttonprops.md#optional-text)
 * [visible](buttonprops.md#optional-visible)
 * [windowOpacity](buttonprops.md#optional-windowopacity)
 * [windowTitle](buttonprops.md#optional-windowtitle)
@@ -41,6 +44,26 @@ ___
 • **flat**? : *undefined | false | true*
 
 Sets whether the button border is raised. [QPushButton: setFlat](https://docs.nodegui.org/docs/api/QPushButton#buttonsetflatisflat)
+
+___
+
+### `Optional` icon
+
+• **icon**? : *QIcon*
+
+*Inherited from void*
+
+Sets an icon in the button. [QPushButton: setIcon](https://docs.nodegui.org/docs/api/QPushButton#buttonseticonicon)
+
+___
+
+### `Optional` iconSize
+
+• **iconSize**? : *QSize*
+
+*Inherited from void*
+
+Sets an icon size in the button. [QPushButton: setIconSize](https://docs.nodegui.org/docs/api/QPushButton#buttonseticonsize)
 
 ___
 
@@ -81,6 +104,16 @@ ___
 *Inherited from [ViewProps](viewprops.md).[styleSheet](viewprops.md#optional-stylesheet)*
 
 Sets the property that holds the widget's style sheet. [QWidget: setStyleSheet](https://docs.nodegui.org/docs/api/NodeWidget#widgetsetstylesheetstylesheet)
+
+___
+
+### `Optional` text
+
+• **text**? : *undefined | string*
+
+*Inherited from void*
+
+Sets the given text to the button (Used as an alternative to children). [QPushButton: setText](https://docs.nodegui.org/docs/api/QPushButton#buttonsettexttext)
 
 ___
 

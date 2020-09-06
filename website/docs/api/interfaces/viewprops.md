@@ -10,8 +10,6 @@ sidebar_label: "ViewProps"
 
   ↳ [TextProps](textprops.md)
 
-  ↳ [ButtonProps](buttonprops.md)
-
   ↳ [LineEditProps](lineeditprops.md)
 
 ## Index
