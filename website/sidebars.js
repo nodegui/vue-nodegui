@@ -13,6 +13,7 @@ module.exports = {
   "api": {
     "Widgets": [
       "api/interfaces/buttonprops",
+      "api/interfaces/checkboxprops",
       "api/interfaces/imageprops",
       "api/interfaces/lineeditprops",
       "api/interfaces/textprops",
