@@ -3,9 +3,10 @@ import ViewConfig from './View';
 import TextConfig from './Text';
 import LineEditConfig from './LineEdit';
 import ImageConfig from './Image';
+import CheckboxConfig from './Checkbox';
+import RadioButtonConfig from './RadioButton';
 import { ValidNativeWidgets } from './nativeWidget';
 import { WidgetConfig } from './config';
-import CheckboxConfig from './Checkbox';
 
 type WidgetMap = {
   [key in ValidNativeWidgets]: WidgetConfig<any>
@@ -18,6 +19,7 @@ const widgetMap: WidgetMap = {
   'vn-text': new TextConfig(),
   'vn-view': new ViewConfig(),
   'vn-checkbox': new CheckboxConfig(),
+  'vn-radio-button': new RadioButtonConfig(),
 };
 
 const getConfigByType = (type: ValidNativeWidgets) => {
