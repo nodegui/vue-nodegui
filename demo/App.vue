@@ -13,7 +13,7 @@
       <numeric-button number="7" @numberPressed="handleNumberPress" />
       <numeric-button number="8" @numberPressed="handleNumberPress" />
       <numeric-button number="9" @numberPressed="handleNumberPress" />
-      <action-button text="X" action="multiply" @actionPressed="handleActionPress" />
+      <action-button text="*" action="multiply" @actionPressed="handleActionPress" />
     </row>
     <row>
       <numeric-button number="4" @numberPressed="handleNumberPress" />
