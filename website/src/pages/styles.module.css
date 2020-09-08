@@ -24,15 +24,45 @@
   justify-content: center;
 }
 
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
 .features {
   display: flex;
   align-items: center;
   padding: 2rem 0;
   width: 100%;
+  max-width: 1280px;
+  align-self: center;
   text-align: center;
+}
+
+.description {
+  display: flex;
+  align-items: center;
+  padding: 4rem 0;
+  width: 100%;
+  max-width: 1280px;
+  align-self: center;
 }
 
 .featureImage {
   height: 200px;
   width: 200px;
+}
+
+.demoImg {
+  max-height: 300px;
+}
+
+.descriptionRow {
+  justify-content: center;
+  align-items: center;
+}
+
+.imgColumn {
+  display: flex !important;
+  justify-content: center;
 }
