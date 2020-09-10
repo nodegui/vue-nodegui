@@ -84,6 +84,9 @@ module.exports = {
       ],
       copyright: `Copyright © ${new Date().getFullYear()} Shubham Zanwar.`,
     },
+    googleAnalytics: {
+      trackingID: "UA-177685902-1"
+    },
   },
   presets: [
     [
