@@ -4,7 +4,7 @@
 
 Build **performant**, **native** and **cross-platform** desktop applications with Vue.🚀
 
-Vue NodeGUI is powered by **Vue** ⚛️ and **Qt5** 💚 which makes it CPU and memory efficient as compared to other chromium based solutions like electron. Vue NodeGUI is essentially a Vue renderer for [NodeGUI](https://github.com/nodegui/nodegui).
+Vue NodeGUI is powered by **Vue** 🌈 and **Qt5** 💚 which makes it CPU and memory efficient as compared to other chromium based solutions like electron. Vue NodeGUI is essentially a Vue renderer for [NodeGUI](https://github.com/nodegui/nodegui).
 
 Visit: https://vue.nodegui.org for docs.
 
