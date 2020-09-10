@@ -4,6 +4,7 @@
   "description": "library to render native desktop applications using vue js",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
+  "private": false,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint --ext ts .",
@@ -21,7 +22,7 @@
     "desktop",
     "applications"
   ],
-  "author": "Shubham Zanwar",
+  "author": "Shubham Zanwar <zanwar.shubham@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/nodegui/vue-nodegui/issues"
