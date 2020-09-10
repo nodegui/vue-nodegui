@@ -41,7 +41,7 @@ Visit: https://vue.nodegui.org for docs.
 
 ## Getting Started
 
-- Check out the starter repo (Coming soon - Currently, you can check the demo folder in this repo)
+- Check out the [vue-nodegui starter repo](https://github.com/nodegui/vue-nodegui-starter)
 - Read through the [docs](https://vue.nodegui.org)
 
 ## Docs for contributing
