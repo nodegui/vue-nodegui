@@ -1,8 +1,9 @@
 {
-  "name": "vue-nodegui",
+  "name": "@nodegui/vue-nodegui",
   "version": "0.0.1",
   "description": "library to render native desktop applications using vue js",
   "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint --ext ts .",
@@ -12,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shubhamzanwar/vue-nodegui.git"
+    "url": "git+https://github.com/nodegui/vue-nodegui.git"
   },
   "keywords": [
     "vue",
@@ -23,9 +24,9 @@
   "author": "Shubham Zanwar",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/shubhamzanwar/vue-nodegui/issues"
+    "url": "https://github.com/nodegui/vue-nodegui/issues"
   },
-  "homepage": "https://github.com/shubhamzanwar/vue-nodegui#readme",
+  "homepage": "https://github.com/nodegui/vue-nodegui#readme",
   "dependencies": {
     "@nodegui/nodegui": "^0.24.0",
     "@vue/compiler-core": "^3.0.0-rc.10",

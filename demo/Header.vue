@@ -39,7 +39,7 @@ export default {
 
     const link = `<a 
               style="color: white" 
-              href="https://github.com/shubhamzanwar/vue-nodegui">
+              href="https://github.com/nodegui/vue-nodegui">
             docs
           </a>`;
 
