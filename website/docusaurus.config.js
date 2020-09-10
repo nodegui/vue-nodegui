@@ -1,10 +1,10 @@
 module.exports = {
   title: 'Vue NodeGui',
   tagline: 'Build performant, native, cross platform desktop apps with Vue 🚀',
-  url: 'https://shubhamzanwar.github.io',
+  url: 'https://vue.nodegui.org',
   baseUrl: '/',
   favicon: 'img/favicon.ico',
-  organizationName: 'shubhamzanwar', // Usually your GitHub org/user name.
+  organizationName: 'nodegui', // Usually your GitHub org/user name.
   projectName: 'vue-nodegui', // Usually your repo name.
   themeConfig: {
     navbar: {
@@ -28,7 +28,7 @@ module.exports = {
         },
         {to: 'blog', label: 'Blog', position: 'right'},
         {
-          href: 'https://github.com/shubhamzanwar/vue-nodegui',
+          href: 'https://github.com/nodegui/vue-nodegui',
           position: 'right',
           className: 'header-github-link',
           'aria-label': 'GitHub repository',
@@ -55,16 +55,16 @@ module.exports = {
           title: 'Community',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              label: 'Spectrum',
+              href: 'https://spectrum.chat/nodegui',
             },
             {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
+              label: 'Medium',
+              href: 'https://medium.com/nodegui',
             },
             {
               label: 'Twitter',
-              href: 'https://twitter.com/szanwar22',
+              href: 'https://twitter.com/node_gui',
             },
           ],
         },
@@ -77,7 +77,7 @@ module.exports = {
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/shubhamzanwar/vue-nodegui',
+              href: 'https://github.com/nodegui/vue-nodegui',
             },
           ],
         },

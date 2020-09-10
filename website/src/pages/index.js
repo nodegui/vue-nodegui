@@ -23,7 +23,7 @@ const features = [
     description: (
       <>
         Vue NodeGui is an open source project built on other open source technologies.
-        We love the community and will always <a href="https://github.com/shubhamzanwar/vue-nodegui" target="__blank">welcome contributions</a>!
+        We love the community and will always <a href="https://github.com/nodegui/vue-nodegui" target="__blank">welcome contributions</a>!
       </>
     ),
   },
