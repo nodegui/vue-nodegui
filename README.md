@@ -12,21 +12,6 @@ Visit: https://vue.nodegui.org for docs.
 
 > This project is in active development. It should be okay for smaller projects but anything complex - electron is the way to go for now. 🚧
 
-## How does it look?
-
-<div style="display:inline; margin: 0 auto;">
-<img alt="demo_linux" src="https://github.com/nodegui/examples/raw/master/react-nodegui/calculator/calculator_linux.png" height="280" />
-<img alt="demo_win" src="https://github.com/nodegui/examples/raw/master/react-nodegui/calculator/calculator_win.jpg" height="280" />
-<img alt="demo_mac" src="https://github.com/nodegui/examples/raw/master/react-nodegui/calculator/calculator_mac.png" height="280" />
-</div>
-
-<div style="display:inline; margin: 0 auto;"><img alt="kitchen" src="https://github.com/nodegui/nodegui/raw/master/extras/assets/kitchen.png" height="280" /><img alt="demo_mac" src="https://github.com/nodegui/examples/raw/master/react-nodegui/weather-app-widget/weather_widget_mac.png" height="280" /><img alt="demo_win" src="https://github.com/nodegui/examples/raw/master/react-nodegui/image-view/image_view_win.jpg" height="280" />
-</div>
-
-**More screenshots?**
-
-[See examples](https://github.com/nodegui/examples/)
-
 ## Features
 
 - 🧬 Cross platform. Should work on major Linux flavours, Windows and MacOS
