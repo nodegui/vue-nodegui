@@ -1,0 +1,24 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "gregbenner",
+      "name": "Greg B",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/1177690?v=4",
+      "profile": "https://gregbenner.life",
+      "contributions": [
+        "doc"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "vue-nodegui",
+  "projectOwner": "nodegui",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
