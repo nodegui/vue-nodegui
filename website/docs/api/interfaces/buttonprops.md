@@ -4,6 +4,39 @@ title: "ButtonProps"
 sidebar_label: "ButtonProps"
 ---
 
+The button widget allows users to create and render native buttons in the app.
+This widget is based on [NodeGui's QPushButton](https://docs.nodegui.org/docs/api/QPushButton)
+
+## Usage
+
+```html
+<template>
+ <vn-button @clicked="buttonClicked">
+   Test button
+ </vn-button>
+</template>
+
+<script>
+ export default {
+   setup() {
+     return {
+       buttonClicked: () => console.log("the button was clicked")
+     }
+   }
+ }
+</script>
+```
+
+## What does it look like?
+
+![test](/img/vn-button.png)
+
+## Props and styling
+
+You can find all the props `vn-button` accepts listed below.
+Apart from this, you can take a look at the [styling](/docs/guides/3-styling)
+and [event handling](/docs/guides/5-handle-events) docs
+
 ## Hierarchy
 
 * AbstractButtonProps
