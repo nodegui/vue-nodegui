@@ -1,4 +1,7 @@
 # Vue NodeGui
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 [![Join the NodeGUI community on Spectrum](https://withspectrum.github.io/badge/badge.svg)](https://spectrum.chat/nodegui)
 
@@ -11,21 +14,6 @@ Visit: https://vue.nodegui.org for docs.
 <img alt="logo" src="https://github.com/nodegui/nodegui/raw/master/extras/logo/nodegui.png" height="200" />
 
 > This project is in active development. It should be okay for smaller projects but anything complex - electron is the way to go for now. 🚧
-
-## How does it look?
-
-<div style="display:inline; margin: 0 auto;">
-<img alt="demo_linux" src="https://github.com/nodegui/examples/raw/master/react-nodegui/calculator/calculator_linux.png" height="280" />
-<img alt="demo_win" src="https://github.com/nodegui/examples/raw/master/react-nodegui/calculator/calculator_win.jpg" height="280" />
-<img alt="demo_mac" src="https://github.com/nodegui/examples/raw/master/react-nodegui/calculator/calculator_mac.png" height="280" />
-</div>
-
-<div style="display:inline; margin: 0 auto;"><img alt="kitchen" src="https://github.com/nodegui/nodegui/raw/master/extras/assets/kitchen.png" height="280" /><img alt="demo_mac" src="https://github.com/nodegui/examples/raw/master/react-nodegui/weather-app-widget/weather_widget_mac.png" height="280" /><img alt="demo_win" src="https://github.com/nodegui/examples/raw/master/react-nodegui/image-view/image_view_win.jpg" height="280" />
-</div>
-
-**More screenshots?**
-
-[See examples](https://github.com/nodegui/examples/)
 
 ## Features
 
@@ -103,3 +91,22 @@ People maintaining this project.
     <td align="center"><a href="https://twitter.com/szanwar22"><img src="https://avatars0.githubusercontent.com/u/15626155?v=4" width="100px;" alt="Shubham Zanwar"/><br /><sub><b>Shubham Zanwar</b></sub></a></td>
   </tr>
 </table>
+
+## Contributors ✨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="https://gregbenner.life"><img src="https://avatars3.githubusercontent.com/u/1177690?v=4" width="100px;" alt=""/><br /><sub><b>Greg B</b></sub></a><br /><a href="https://github.com/nodegui/vue-nodegui/commits?author=gregbenner" title="Documentation">📖</a></td>
+  </tr>
+</table>
+
+<!-- markdownlint-enable -->
+<!-- prettier-ignore-end -->
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
