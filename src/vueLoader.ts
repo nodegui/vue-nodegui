@@ -2,9 +2,11 @@ import { transformModel as baseTransform, registerRuntimeHelpers, DirectiveTrans
 import { isNativeWidget } from './widgets/nativeWidget';
 
 const V_MODEL_TEXT = Symbol('vModelText');
+const V_MODEL_SLIDER = Symbol('vModelSlider');
 
 registerRuntimeHelpers({
   [V_MODEL_TEXT]: 'vModelText',
+  [V_MODEL_SLIDER]: 'vModelSlider',
 });
 
 type CompilerOptions = {
@@ -21,10 +23,15 @@ export const compilerOptions: CompilerOptions = {
       const baseResult = baseTransform(dir, node, context);
       const { tag } = node;
       let directiveToUse;
-      if (tag === 'vn-line-edit') {
-        directiveToUse = V_MODEL_TEXT;
-      } else {
-        throw new Error(`cannot use v-model on tag: ${tag}`);
+      switch (tag) {
+        case 'vn-line-edit':
+          directiveToUse = V_MODEL_TEXT;
+          break;
+        case 'vn-slider':
+          directiveToUse = V_MODEL_SLIDER;
+          break;
+        default:
+          throw new Error(`cannot use v-model on tag: ${tag}`);
       }
       baseResult.needRuntime = context.helper(directiveToUse as symbol);
       // console.log('dir', dir);
