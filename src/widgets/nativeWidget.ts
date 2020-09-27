@@ -5,7 +5,8 @@ export type ValidNativeWidgets = 'vn-image' |
 'vn-button' |
 'vn-checkbox' |
 'vn-radio-button' |
-'vn-scroll-area';
+'vn-scroll-area' |
+'vn-slider';
 
 // Add vue-nodegui widgets here
 // whenever new ones are created
@@ -18,6 +19,7 @@ const nativeWidgets: {[key in ValidNativeWidgets]: boolean} = {
   'vn-checkbox': true,
   'vn-radio-button': true,
   'vn-scroll-area': true,
+  'vn-slider': true,
 };
 
 export const isNativeWidget = (type: ValidNativeWidgets) => !!nativeWidgets[type];

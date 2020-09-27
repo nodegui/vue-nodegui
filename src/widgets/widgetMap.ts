@@ -6,6 +6,7 @@ import ImageConfig from './Image';
 import CheckboxConfig from './Checkbox';
 import RadioButtonConfig from './RadioButton';
 import ScrollAreaConfig from './ScrollArea';
+import SliderConfig from './Slider';
 import { ValidNativeWidgets } from './nativeWidget';
 import { WidgetConfig } from './config';
 
@@ -22,6 +23,7 @@ const widgetMap: WidgetMap = {
   'vn-checkbox': new CheckboxConfig(),
   'vn-radio-button': new RadioButtonConfig(),
   'vn-scroll-area': new ScrollAreaConfig(),
+  'vn-slider': new SliderConfig(),
 };
 
 const getConfigByType = (type: ValidNativeWidgets) => {

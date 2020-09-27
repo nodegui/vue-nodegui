@@ -18,6 +18,7 @@ module.exports = {
       "api/interfaces/lineeditprops",
       "api/interfaces/radiobuttonprops",
       "api/interfaces/scrollareaprops",
+      "api/interfaces/sliderprops",
       "api/interfaces/textprops",
       "api/interfaces/viewprops"
     ]
