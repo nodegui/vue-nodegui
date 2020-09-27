@@ -40,7 +40,7 @@ import { ViewProps, viewPropsSetters } from '../View/VNView';
  *
  * ## Props and styling
  *
- * You can find all the props `vn-text` accepts listed below.
+ * You can find all the props `vn-slider` accepts listed below.
  * Apart from this, you can take a look at the [styling](/docs/guides/3-styling)
  * and [event handling](/docs/guides/5-handle-events) docs
  */
