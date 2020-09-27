@@ -46,6 +46,8 @@ and [event handling](/docs/guides/5-handle-events) docs
 
   ↳ [ScrollAreaProps](scrollareaprops.md)
 
+  ↳ [SliderProps](sliderprops.md)
+
 ## Index
 
 ### Properties
