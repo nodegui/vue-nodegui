@@ -5,6 +5,7 @@ import LineEditConfig from './LineEdit';
 import ImageConfig from './Image';
 import CheckboxConfig from './Checkbox';
 import RadioButtonConfig from './RadioButton';
+import ScrollAreaConfig from './ScrollArea';
 import { ValidNativeWidgets } from './nativeWidget';
 import { WidgetConfig } from './config';
 
@@ -20,6 +21,7 @@ const widgetMap: WidgetMap = {
   'vn-view': new ViewConfig(),
   'vn-checkbox': new CheckboxConfig(),
   'vn-radio-button': new RadioButtonConfig(),
+  'vn-scroll-area': new ScrollAreaConfig(),
 };
 
 const getConfigByType = (type: ValidNativeWidgets) => {

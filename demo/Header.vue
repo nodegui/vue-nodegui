@@ -1,5 +1,5 @@
 <template>
-  <vn-view>
+  <vn-view :style="'flex-direction: \'column\''">
     <slot name="header">
       <vn-text>This is the default header slot</vn-text>
     </slot>
