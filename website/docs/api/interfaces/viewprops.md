@@ -44,6 +44,8 @@ and [event handling](/docs/guides/5-handle-events) docs
 
   ↳ [LineEditProps](lineeditprops.md)
 
+  ↳ [ScrollAreaProps](scrollareaprops.md)
+
 ## Index
 
 ### Properties
