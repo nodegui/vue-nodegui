@@ -3,6 +3,36 @@ import { VNWidget } from 'widgets/config';
 import { ViewProps, viewPropsSetters } from '../View/VNView';
 import { PropSetters, Prop } from '../../renderer/patchProp';
 
+/**
+ * The SpinBox component provides the ability to add and manipulate native spin box widgets.
+ * It is based on [NodeGui's QSpinBox](https://docs.nodegui.org/docs/api/generated/classes/qspinbox/).
+ *
+ * ## Usage
+ *
+ * ```html
+ * <template>
+ *  <vn-view>
+ *    <vn-text>How many slices of cake would you like?</vn-text>
+ *    <vn-spinbox />
+ *  </vn-view>
+ * </template>
+ *
+ * <script>
+ *  export default { }
+ * </script>
+ * ```
+ *
+ * ## What it looks like?
+ *
+ * ![spinbox-demo](/img/vn-spinbox.gif)
+ *
+ * ## Props and styling
+ *
+ * You can find all the props `vn-spinbox` accepts listed below.
+ * Apart from this, you can take a look at the [styling](/docs/guides/3-styling)
+ * and [event handling](/docs/guides/5-handle-events) docs
+ */
+
 export interface SpinBoxProps extends ViewProps {
   prefix?: string;
   suffix?: string;
