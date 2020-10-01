@@ -19,6 +19,7 @@ module.exports = {
       "api/interfaces/radiobuttonprops",
       "api/interfaces/scrollareaprops",
       "api/interfaces/sliderprops",
+      "api/interfaces/spinboxprops",
       "api/interfaces/textprops",
       "api/interfaces/viewprops"
     ]
