@@ -13,6 +13,16 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "rohinivsenthil",
+      "name": "Rohini Senthil",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/42040329?v=4",
+      "profile": "https://github.com/rohinivsenthil",
+      "contributions": [
+        "doc",
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
