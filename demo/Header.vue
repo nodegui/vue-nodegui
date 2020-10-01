@@ -18,6 +18,7 @@
     </slot>
     <vn-checkbox>checkbox label</vn-checkbox>
     <vn-radio-button>radio-button label</vn-radio-button>
+    <vn-spinbox />
   </vn-view>
 </template>
 
@@ -49,7 +50,8 @@ export default {
       viewVisible,
       toggleView,
       line1Text,
-      link
+      link, 
+      range
     };
   }
 }
