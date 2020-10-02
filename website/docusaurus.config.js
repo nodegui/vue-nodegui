@@ -87,6 +87,11 @@ module.exports = {
     googleAnalytics: {
       trackingID: "UA-177685902-1"
     },
+    algolia: {
+      apiKey: '4ecc8a4a6fecbd2b21ab6942a9e0d45f',
+      indexName: 'vue-nodegui',
+      algoliaOptions: {}, // Optional, if provided by Algolia
+    },
   },
   presets: [
     [
