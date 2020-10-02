@@ -12,13 +12,20 @@ import { PropSetters, Prop } from '../../renderer/patchProp';
  * ```html
  * <template>
  *  <vn-view>
- *    <vn-text>How many slices of cake would you like?</vn-text>
- *    <vn-spinbox />
+ *    <vn-text>How many slices of cake ($2) would you like?</vn-text>
+ *    <vn-spinbox v-model="spinBoxValue"/>
+ *    <vn-text>Total cost: ${{spinBoxValue * 2}}</vn-text>
  *  </vn-view>
  * </template>
  *
  * <script>
- *  export default { }
+ *   export default {
+ *     data() {
+ *       return {
+ *         spinBoxValue: 0
+ *       }
+ *     }
+ *   }
  * </script>
  * ```
  *
