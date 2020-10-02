@@ -50,8 +50,7 @@ export default {
       viewVisible,
       toggleView,
       line1Text,
-      link, 
-      range
+      link
     };
   }
 }
