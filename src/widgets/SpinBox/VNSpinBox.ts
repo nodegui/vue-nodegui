@@ -19,13 +19,14 @@ import { PropSetters, Prop } from '../../renderer/patchProp';
  * </template>
  *
  * <script>
- *   export default {
- *     data() {
- *       return {
- *         spinBoxValue: 0
- *       }
- *     }
- *   }
+ * import { ref } from 'vue';
+ *
+ * export default {
+ *  setup() {
+ *    const spinBoxValue = ref(0)
+ *    return { spinBoxValue }
+ *  }
+ * }
  * </script>
  * ```
  *

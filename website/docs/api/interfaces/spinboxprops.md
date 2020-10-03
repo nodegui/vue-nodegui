@@ -19,13 +19,14 @@ It is based on [NodeGui's QSpinBox](https://docs.nodegui.org/docs/api/generated/
 </template>
 
 <script>
-  export default {
-    data() {
-      return {
-        spinBoxValue: 0
-      }
-    }
-  }
+import { ref } from 'vue';
+
+export default {
+ setup() {
+   const spinBoxValue = ref(0)
+   return { spinBoxValue }
+ }
+}
 </script>
 ```
 
