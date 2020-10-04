@@ -8,7 +8,7 @@ module.exports = {
       "guides/5-handle-events",
       "guides/6-images",
       "guides/7-networking"
-    ],
+    ]
   },
   "api": {
     "Widgets": [
