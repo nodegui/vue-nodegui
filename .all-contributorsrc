@@ -32,6 +32,15 @@
       "contributions": [
         "infra"
       ]
+    },
+    {
+      "login": "tusharmoraye",
+      "name": "Tushar Moraye",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/25436413?v=4",
+      "profile": "https://tusharmoraye.github.io/",
+      "contributions": [
+        "infra"
+      ]
     }
   ],
   "contributorsPerLine": 7,
