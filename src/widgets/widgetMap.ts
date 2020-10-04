@@ -8,6 +8,7 @@ import RadioButtonConfig from './RadioButton';
 import ScrollAreaConfig from './ScrollArea';
 import SliderConfig from './Slider';
 import SpinBoxConfig from './SpinBox';
+import ProgressBarConfig from './ProgressBar';
 import { ValidNativeWidgets } from './nativeWidget';
 import { WidgetConfig } from './config';
 
@@ -26,6 +27,7 @@ const widgetMap: WidgetMap = {
   'vn-scroll-area': new ScrollAreaConfig(),
   'vn-slider': new SliderConfig(),
   'vn-spinbox': new SpinBoxConfig(),
+  'vn-progress-bar': new ProgressBarConfig(),
 };
 
 const getConfigByType = (type: ValidNativeWidgets) => {
