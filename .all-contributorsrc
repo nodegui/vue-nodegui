@@ -23,6 +23,15 @@
         "doc",
         "code"
       ]
+    },
+    {
+      "login": "michaeltintiuc",
+      "name": "Michael Tintiuc",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/1321256?v=4",
+      "profile": "https://michaeltintiuc.com",
+      "contributions": [
+        "infra"
+      ]
     }
   ],
   "contributorsPerLine": 7,
