@@ -16,15 +16,11 @@ if (sidebarsData.guides && sidebarsData.guides.Interfaces) {
   delete sidebarsData.guides.Interfaces;
 
   if (sidebarsData.api) {
-    sidebarsData.api.Interfaces = interfaces;
-
-    if (sidebarsData.api.Widgets) {
-      delete sidebarsData.api.Widgets;
-    }
+    sidebarsData.api.Widgets = interfaces;
   }
 
   if (fs.existsSync(SIDEBARS_FILE)) {
-    const data = `module.exports = ${JSON.stringify(sidebarsData, null, 2)}`;
+    const data = `module.exports = ${JSON.stringify(sidebarsData, null, 2)};\n`;
     fs.writeFileSync(SIDEBARS_FILE, data);
   }
 }

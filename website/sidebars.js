@@ -11,7 +11,7 @@ module.exports = {
     ]
   },
   "api": {
-    "Interfaces": [
+    "Widgets": [
       "api/interfaces/buttonprops",
       "api/interfaces/checkboxprops",
       "api/interfaces/imageprops",
@@ -24,4 +24,4 @@ module.exports = {
       "api/interfaces/viewprops"
     ]
   }
-}
+};
