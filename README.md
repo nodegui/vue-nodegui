@@ -1,6 +1,6 @@
 # Vue NodeGui
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 [![Join the NodeGUI community on Spectrum](https://withspectrum.github.io/badge/badge.svg)](https://spectrum.chat/nodegui)
@@ -104,6 +104,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://gregbenner.life"><img src="https://avatars3.githubusercontent.com/u/1177690?v=4" width="100px;" alt=""/><br /><sub><b>Greg B</b></sub></a><br /><a href="https://github.com/nodegui/vue-nodegui/commits?author=gregbenner" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/rohinivsenthil"><img src="https://avatars1.githubusercontent.com/u/42040329?v=4" width="100px;" alt=""/><br /><sub><b>Rohini Senthil</b></sub></a><br /><a href="https://github.com/nodegui/vue-nodegui/commits?author=rohinivsenthil" title="Documentation">📖</a> <a href="https://github.com/nodegui/vue-nodegui/commits?author=rohinivsenthil" title="Code">💻</a></td>
     <td align="center"><a href="https://michaeltintiuc.com"><img src="https://avatars2.githubusercontent.com/u/1321256?v=4" width="100px;" alt=""/><br /><sub><b>Michael Tintiuc</b></sub></a><br /><a href="#infra-michaeltintiuc" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a></td>
+    <td align="center"><a href="https://tusharmoraye.github.io/"><img src="https://avatars3.githubusercontent.com/u/25436413?v=4" width="100px;" alt=""/><br /><sub><b>Tushar Moraye</b></sub></a><br /><a href="#infra-tusharmoraye" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a></td>
   </tr>
 </table>
 
