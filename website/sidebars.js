@@ -8,10 +8,10 @@ module.exports = {
       "guides/5-handle-events",
       "guides/6-images",
       "guides/7-networking"
-    ],
+    ]
   },
   "api": {
-    "Widgets": [
+    "Interfaces": [
       "api/interfaces/buttonprops",
       "api/interfaces/checkboxprops",
       "api/interfaces/imageprops",
@@ -24,4 +24,4 @@ module.exports = {
       "api/interfaces/viewprops"
     ]
   }
-};
+}
