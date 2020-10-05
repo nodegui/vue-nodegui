@@ -19,6 +19,8 @@
     <vn-checkbox>checkbox label</vn-checkbox>
     <vn-radio-button>radio-button label</vn-radio-button>
     <vn-spinbox />
+    <vn-text>Here's a progres bar</vn-text>
+    <vn-progress-bar :value="45" />
   </vn-view>
 </template>
 

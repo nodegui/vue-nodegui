@@ -16,6 +16,7 @@ module.exports = {
       "api/interfaces/checkboxprops",
       "api/interfaces/imageprops",
       "api/interfaces/lineeditprops",
+      "api/interfaces/progressbarprops",
       "api/interfaces/radiobuttonprops",
       "api/interfaces/scrollareaprops",
       "api/interfaces/sliderprops",
