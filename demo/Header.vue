@@ -21,6 +21,7 @@
     <vn-spinbox />
     <vn-text>Here's a progres bar</vn-text>
     <vn-progress-bar :value="45" />
+    <vn-combobox :items="data" />
   </vn-view>
 </template>
 
@@ -31,6 +32,11 @@ export default {
   setup() {
     const count = ref(0);
     const viewVisible = ref(true);
+    const data = [
+      {text: "item 1"}, 
+      {text: "item 2"}, 
+      {text: "item 3"}, 
+    ];
     const line1Text = ref('Type whatever you want in the text box below');
     const inc = () => {
       count.value++;
@@ -52,7 +58,8 @@ export default {
       viewVisible,
       toggleView,
       line1Text,
-      link
+      link,
+      data,
     };
   }
 }
