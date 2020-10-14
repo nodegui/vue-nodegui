@@ -9,6 +9,7 @@ import ScrollAreaConfig from './ScrollArea';
 import SliderConfig from './Slider';
 import SpinBoxConfig from './SpinBox';
 import ProgressBarConfig from './ProgressBar';
+import ComboBoxConfig from './ComboBox';
 import { ValidNativeWidgets } from './nativeWidget';
 import { WidgetConfig } from './config';
 
@@ -28,6 +29,7 @@ const widgetMap: WidgetMap = {
   'vn-slider': new SliderConfig(),
   'vn-spinbox': new SpinBoxConfig(),
   'vn-progress-bar': new ProgressBarConfig(),
+  'vn-combobox': new ComboBoxConfig(),
 };
 
 const getConfigByType = (type: ValidNativeWidgets) => {
