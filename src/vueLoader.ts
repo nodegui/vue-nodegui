@@ -4,11 +4,13 @@ import { isNativeWidget } from './widgets/nativeWidget';
 const V_MODEL_TEXT = Symbol('vModelText');
 const V_MODEL_SLIDER = Symbol('vModelSlider');
 const V_MODEL_SPINBOX = Symbol('vModelSpinBox');
+const V_MODEL_COMBOBOX = Symbol('vModelComboBox');
 
 registerRuntimeHelpers({
   [V_MODEL_TEXT]: 'vModelText',
   [V_MODEL_SLIDER]: 'vModelSlider',
   [V_MODEL_SPINBOX]: 'vModelSpinBox',
+  [V_MODEL_COMBOBOX]: 'vModelComboBox',
 });
 
 type CompilerOptions = {
@@ -34,6 +36,9 @@ export const compilerOptions: CompilerOptions = {
           break;
         case 'vn-spinbox':
           directiveToUse = V_MODEL_SPINBOX;
+          break;
+        case 'vn-combobox':
+          directiveToUse = V_MODEL_COMBOBOX;
           break;
         default:
           throw new Error(`cannot use v-model on tag: ${tag}`);
