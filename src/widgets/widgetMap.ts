@@ -10,6 +10,7 @@ import SliderConfig from './Slider';
 import SpinBoxConfig from './SpinBox';
 import ProgressBarConfig from './ProgressBar';
 import ComboBoxConfig from './ComboBox';
+import DialConfig from './Dial';
 import { ValidNativeWidgets } from './nativeWidget';
 import { WidgetConfig } from './config';
 
@@ -30,6 +31,7 @@ const widgetMap: WidgetMap = {
   'vn-spinbox': new SpinBoxConfig(),
   'vn-progress-bar': new ProgressBarConfig(),
   'vn-combobox': new ComboBoxConfig(),
+  'vn-dial': new DialConfig(),
 };
 
 const getConfigByType = (type: ValidNativeWidgets) => {
