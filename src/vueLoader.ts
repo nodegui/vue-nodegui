@@ -32,6 +32,7 @@ export const compilerOptions: CompilerOptions = {
           directiveToUse = V_MODEL_TEXT;
           break;
         case 'vn-slider':
+        case 'vn-dial':
           directiveToUse = V_MODEL_SLIDER;
           break;
         case 'vn-spinbox':

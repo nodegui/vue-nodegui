@@ -22,6 +22,8 @@
     <vn-text>Here's a progres bar</vn-text>
     <vn-progress-bar :value="45" />
     <vn-combobox :items="data" />
+    <vn-dial :notchesVisible="true" v-model="dialValue" />
+    <vn-text>{{dialValue}}</vn-text>
   </vn-view>
 </template>
 
@@ -32,6 +34,7 @@ export default {
   setup() {
     const count = ref(0);
     const viewVisible = ref(true);
+    const dialValue = ref(0);
     const data = [
       {text: "item 1"}, 
       {text: "item 2"}, 
@@ -60,11 +63,8 @@ export default {
       line1Text,
       link,
       data,
+      dialValue,
     };
   }
 }
 </script>
-
-<style>
-
-</style>
