@@ -1,6 +1,6 @@
 {
   "name": "@nodegui/vue-nodegui",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "library to render native desktop applications using vue js",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
