@@ -12,8 +12,11 @@ module.exports = {
   },
   "api": {
     "Widgets": [
+      "api/interfaces/animatedimageprops",
       "api/interfaces/buttonprops",
       "api/interfaces/checkboxprops",
+      "api/interfaces/comboboxprops",
+      "api/interfaces/dialprops",
       "api/interfaces/imageprops",
       "api/interfaces/lineeditprops",
       "api/interfaces/progressbarprops",
