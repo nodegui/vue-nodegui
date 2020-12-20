@@ -1,62 +1,68 @@
 ---
-id: "textprops"
-title: "TextProps"
-sidebar_label: "TextProps"
+id: "animatedimageprops"
+title: "AnimatedImageProps"
+sidebar_label: "AnimatedImageProps"
 ---
 
-The text widget allows users to create and render native text components in the app.
-It is based on [NodeGui's QLabel](https://docs.nodegui.org/docs/api/generated/classes/qlabel)
-
-> You can also use the QLabel widget to render rich-text HTML (like in emails)
+The animated image widget allows users to create and render native GIFs, video (without controls)
+elements in the app.
+It is based on [NodeGui's QLabel](https://docs.nodegui.org/docs/api/generated/classes/qlabel) along with [NodeGui's QMovie](https://docs.nodegui.org/docs/api/generated/classes/qmovie)
 
 ## Usage
 
 ```html
 <template>
- <vn-text>Sample text</vn-text>
+ <vn-view>
+  <vn-animated-image :src="'https://i.giphy.com/media/oYtVHSxngR3lC/giphy.gif'" />
+ </vn-view>
 </template>
 
 <script>
  export default { }
 </script>
 ```
+
 ## What it looks like?
 
-![text-demo](/img/vn-text.png)
+![animated-image-demo](/img/vn-animated-image.gif)
 
 ## Props and styling
 
-You can find all the props `vn-text` accepts listed below.
+You can find all the props `vn-animated-image` accepts listed below.
 Apart from this, you can take a look at the [styling](/docs/guides/3-styling)
 and [event handling](/docs/guides/5-handle-events) docs
 
 ## Hierarchy
 
-* [ViewProps](viewprops.md)
+  ↳ [TextProps](textprops.md)
 
-  ↳ **TextProps**
-
-  ↳ [ImageProps](imageprops.md)
-
-  ↳ [AnimatedImageProps](animatedimageprops.md)
+  ↳ **AnimatedImageProps**
 
 ## Index
 
 ### Properties
 
-* [enabled](textprops.md#optional-enabled)
-* [id](textprops.md#optional-id)
-* [mouseTracking](textprops.md#optional-mousetracking)
-* [openExternalLinks](textprops.md#optional-openexternallinks)
-* [scaledContents](textprops.md#optional-scaledcontents)
-* [style](textprops.md#optional-style)
-* [styleSheet](textprops.md#optional-stylesheet)
-* [visible](textprops.md#optional-visible)
-* [windowOpacity](textprops.md#optional-windowopacity)
-* [windowTitle](textprops.md#optional-windowtitle)
-* [wordWrap](textprops.md#optional-wordwrap)
+* [buffer](animatedimageprops.md#optional-buffer)
+* [enabled](animatedimageprops.md#optional-enabled)
+* [id](animatedimageprops.md#optional-id)
+* [mouseTracking](animatedimageprops.md#optional-mousetracking)
+* [openExternalLinks](animatedimageprops.md#optional-openexternallinks)
+* [scaledContents](animatedimageprops.md#optional-scaledcontents)
+* [src](animatedimageprops.md#optional-src)
+* [style](animatedimageprops.md#optional-style)
+* [styleSheet](animatedimageprops.md#optional-stylesheet)
+* [visible](animatedimageprops.md#optional-visible)
+* [windowOpacity](animatedimageprops.md#optional-windowopacity)
+* [windowTitle](animatedimageprops.md#optional-windowtitle)
+* [wordWrap](animatedimageprops.md#optional-wordwrap)
 
 ## Properties
+
+### `Optional` buffer
+
+• **buffer**? : *Buffer*
+
+___
 
 ### `Optional` enabled
 
@@ -92,11 +98,21 @@ ___
 
 • **openExternalLinks**? : *undefined | false | true*
 
+*Inherited from [TextProps](textprops.md).[openExternalLinks](textprops.md#optional-openexternallinks)*
+
 ___
 
 ### `Optional` scaledContents
 
 • **scaledContents**? : *undefined | false | true*
+
+*Inherited from [TextProps](textprops.md).[scaledContents](textprops.md#optional-scaledcontents)*
+
+___
+
+### `Optional` src
+
+• **src**? : *undefined | string*
 
 ___
 
@@ -153,3 +169,5 @@ ___
 ### `Optional` wordWrap
 
 • **wordWrap**? : *undefined | false | true*
+
+*Inherited from [TextProps](textprops.md).[wordWrap](textprops.md#optional-wordwrap)*
