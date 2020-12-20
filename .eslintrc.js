@@ -5,7 +5,8 @@ module.exports = {
   },
   "parser": "@typescript-eslint/parser",
   "plugins": [
-    "@typescript-eslint"
+    "@typescript-eslint",
+    "babel"
   ],
   "extends": [
     "airbnb-base",
@@ -53,6 +54,8 @@ module.exports = {
     ],
     "class-methods-use-this": 0,
     "max-classes-per-file": 0,
-    'import/no-cycle': 0
+    'import/no-cycle': 0,
+    "no-unused-expressions": 0,
+    "babel/no-unused-expressions": "error"
   }
 }
