@@ -16,6 +16,10 @@
   .heroBanner {
     padding: 2rem;
   }
+
+  .description {
+    text-align: center;
+  }
 }
 
 .buttons {
@@ -60,6 +64,8 @@
 .descriptionRow {
   justify-content: center;
   align-items: center;
+  margin-left: unset !important;
+  margin-right: unset !important;
 }
 
 .imgColumn {
