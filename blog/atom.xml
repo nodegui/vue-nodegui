@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://vue.nodegui.org/blog</id>
+    <title>Vue NodeGui Blog</title>
+    <updated>2020-05-24T00:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://vue.nodegui.org/blog"/>
+    <subtitle>Vue NodeGui Blog</subtitle>
+    <icon>https://vue.nodegui.org/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Welcome]]></title>
+        <id>welcome</id>
+        <link href="https://vue.nodegui.org/blog/welcome"/>
+        <updated>2020-05-24T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Welcome the the official vue-nodegui blog!]]></summary>
+    </entry>
+</feed>
