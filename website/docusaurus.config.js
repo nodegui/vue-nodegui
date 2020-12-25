@@ -3,6 +3,7 @@ module.exports = {
   tagline: 'Build performant, native, cross platform desktop apps with Vue 🚀',
   url: 'https://vue.nodegui.org',
   baseUrl: '/',
+  onBrokenLinks: "ignore",
   favicon: 'img/favicon.ico',
   organizationName: 'nodegui', // Usually your GitHub org/user name.
   projectName: 'vue-nodegui', // Usually your repo name.
