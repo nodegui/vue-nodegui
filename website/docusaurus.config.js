@@ -13,7 +13,7 @@ module.exports = {
         alt: 'Vue NodeGui Logo',
         src: 'img/logo-circle.png',
       },
-      links: [
+      items: [
         {
           to: 'docs/guides/1-getting-started',
           label: 'Docs',
